@@ -29,3 +29,13 @@ E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Proje
 E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
 E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.exe
 E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe.config
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.AssemblyReference.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Gierka.resources
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.resources
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.GenerateResource.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.pdb

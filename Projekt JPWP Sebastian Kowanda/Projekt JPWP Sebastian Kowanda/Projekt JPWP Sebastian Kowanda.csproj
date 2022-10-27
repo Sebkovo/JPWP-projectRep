@@ -141,5 +141,8 @@
   <ItemGroup>
     <None Include="Icons\Exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
