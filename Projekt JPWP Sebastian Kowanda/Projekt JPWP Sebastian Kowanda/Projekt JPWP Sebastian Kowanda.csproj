@@ -129,5 +129,17 @@
   <ItemGroup>
     <None Include="Icons\Lesser_Dragon_Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
