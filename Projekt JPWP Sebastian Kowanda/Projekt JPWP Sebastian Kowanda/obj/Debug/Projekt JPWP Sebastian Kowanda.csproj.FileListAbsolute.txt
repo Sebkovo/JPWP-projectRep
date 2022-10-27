@@ -1,0 +1,31 @@
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe.config
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.AssemblyReference.cache
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.resources
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.GenerateResource.cache
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Gierka.resources
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe.config
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.pdb
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.AssemblyReference.cache
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.SuggestedBindingRedirects.cache
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Gierka.resources
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.resources
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.GenerateResource.cache
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.exe
+C:\Users\SKov\Downloads\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe.config
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Debug\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.AssemblyReference.cache
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Gierka.resources
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.resources
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.GenerateResource.cache
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\Projekt_JPWP_Sebastian_Kowanda\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Debug\Projekt JPWP Sebastian Kowanda.pdb
