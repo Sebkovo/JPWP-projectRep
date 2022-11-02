@@ -221,7 +221,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             }
             else if (e.KeyCode == Keys.G)
             {
-                 Enemy newE = new Enemy();
+                simpleSound.Play();
+                Enemy newE = new Enemy();
                  //MessageBox.Show(square_size.ToString());
                  newE.writeParam(mainScreen, EHealthTXT, EPowerTXT, ENameTXT, EHealthBar, this);
                  bool git = true;
@@ -389,8 +390,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         {
             if (e.KeyCode == Keys.Enter)
             {
-
-                    simpleSound.Play();
 
                 fightTimer.Stop();
                 questionMarkConst1.Visible = false;

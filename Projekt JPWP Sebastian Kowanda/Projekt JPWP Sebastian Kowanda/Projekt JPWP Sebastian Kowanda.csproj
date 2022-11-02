@@ -103,7 +103,6 @@
     <None Include="Icons\mineral.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Audio\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\Aaah.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\Aaaaaah.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

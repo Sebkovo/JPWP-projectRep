@@ -61,6 +61,24 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.IO.UnmanagedMemoryStream podobny do zasobu System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Aaaaaah {
+            get {
+                return ResourceManager.GetStream("Aaaaaah", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.IO.UnmanagedMemoryStream podobny do zasobu System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Aaah {
+            get {
+                return ResourceManager.GetStream("Aaah", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Angry_Slime {
