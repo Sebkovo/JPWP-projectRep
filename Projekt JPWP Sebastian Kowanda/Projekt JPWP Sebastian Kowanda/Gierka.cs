@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using Projekt_JPWP_Sebastian_Kowanda.Properties;
+
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
@@ -25,6 +27,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public Image EnemyImageVar;
         private bool isCalc = false;
         private int answer;
+        SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
         List<City> cities_Array = new List<City>();
         List<Enemy> enemy_Array = new List<Enemy>();
 
@@ -387,7 +390,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             if (e.KeyCode == Keys.Enter)
             {
 
-                    SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\user\Downloads\1.wav");
                     simpleSound.Play();
 
                 fightTimer.Stop();
