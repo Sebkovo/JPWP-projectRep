@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using NAudio.Wave;
 using Projekt_JPWP_Sebastian_Kowanda.Properties;
 
 
@@ -30,7 +31,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
         List<City> cities_Array = new List<City>();
         List<Enemy> enemy_Array = new List<Enemy>();
-
+        
         public Gierka()
         {
             this.KeyPreview = true;
@@ -458,6 +459,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     ticks3 = 0;
                 }
             }
+        }
+        public void disposeMe(WaveOut obj)
+        {
+            obj.Dispose();
         }
     }
 }
