@@ -81,6 +81,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTimer = new System.Windows.Forms.Timer(this.components);
             this.dmgTimer = new System.Windows.Forms.Timer(this.components);
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
+            this.optionsTab = new System.Windows.Forms.TabPage();
+            this.backButt3 = new System.Windows.Forms.PictureBox();
             this.mainScreen.SuspendLayout();
             this.planszaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).BeginInit();
@@ -96,6 +98,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).BeginInit();
+            this.optionsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -106,6 +110,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.mainScreen.Controls.Add(this.backpackTab);
             this.mainScreen.Controls.Add(this.fightTab);
             this.mainScreen.Controls.Add(this.menuTab);
+            this.mainScreen.Controls.Add(this.optionsTab);
             this.mainScreen.ItemSize = new System.Drawing.Size(1, 1);
             this.mainScreen.Location = new System.Drawing.Point(-8, -9);
             this.mainScreen.Margin = new System.Windows.Forms.Padding(2);
@@ -149,7 +154,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.cityInfo.Margin = new System.Windows.Forms.Padding(2);
             this.cityInfo.Name = "cityInfo";
             this.cityInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.cityInfo.Size = new System.Drawing.Size(1171, 994);
+            this.cityInfo.Size = new System.Drawing.Size(1269, 994);
             this.cityInfo.TabIndex = 1;
             // 
             // monTXT
@@ -218,7 +223,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.backpackTab.Location = new System.Drawing.Point(4, 4);
             this.backpackTab.Name = "backpackTab";
             this.backpackTab.Padding = new System.Windows.Forms.Padding(3);
-            this.backpackTab.Size = new System.Drawing.Size(1171, 994);
+            this.backpackTab.Size = new System.Drawing.Size(1269, 994);
             this.backpackTab.TabIndex = 2;
             this.backpackTab.Text = "BackpackTab";
             // 
@@ -312,7 +317,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTab.Location = new System.Drawing.Point(4, 4);
             this.fightTab.Name = "fightTab";
             this.fightTab.Padding = new System.Windows.Forms.Padding(3);
-            this.fightTab.Size = new System.Drawing.Size(1171, 994);
+            this.fightTab.Size = new System.Drawing.Size(1269, 994);
             this.fightTab.TabIndex = 3;
             this.fightTab.Text = "fightTab";
             this.fightTab.Enter += new System.EventHandler(this.fightTab_Enter);
@@ -598,7 +603,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.menuTab.Location = new System.Drawing.Point(4, 4);
             this.menuTab.Name = "menuTab";
             this.menuTab.Padding = new System.Windows.Forms.Padding(3);
-            this.menuTab.Size = new System.Drawing.Size(1171, 994);
+            this.menuTab.Size = new System.Drawing.Size(1269, 994);
             this.menuTab.TabIndex = 4;
             this.menuTab.Text = "tabPage1";
             this.menuTab.UseVisualStyleBackColor = true;
@@ -609,7 +614,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.panelMenu.Controls.Add(this.progressBar1);
             this.panelMenu.Controls.Add(this.backpackIcon);
             this.panelMenu.Controls.Add(this.gearIcon);
-            this.panelMenu.Location = new System.Drawing.Point(1265, 0);
+            this.panelMenu.Location = new System.Drawing.Point(1065, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(102, 986);
@@ -662,6 +667,31 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightTimer.Interval = 1000;
             this.dayNightTimer.Tick += new System.EventHandler(this.dayNightTimer_Tick);
             // 
+            // optionsTab
+            // 
+            this.optionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.optionsTab.Controls.Add(this.backButt3);
+            this.optionsTab.Location = new System.Drawing.Point(4, 4);
+            this.optionsTab.Name = "optionsTab";
+            this.optionsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.optionsTab.Size = new System.Drawing.Size(1269, 994);
+            this.optionsTab.TabIndex = 5;
+            this.optionsTab.Text = "optionsTab";
+            // 
+            // backButt3
+            // 
+            this.backButt3.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Location = new System.Drawing.Point(11, 18);
+            this.backButt3.Margin = new System.Windows.Forms.Padding(2);
+            this.backButt3.Name = "backButt3";
+            this.backButt3.Size = new System.Drawing.Size(22, 24);
+            this.backButt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButt3.TabIndex = 3;
+            this.backButt3.TabStop = false;
+            this.backButt3.Click += new System.EventHandler(this.backButt3_Click);
+            // 
             // Gierka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,6 +723,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).EndInit();
+            this.optionsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -750,6 +782,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.TabPage menuTab;
         private System.Windows.Forms.Timer dayNightTimer;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TabPage optionsTab;
+        private System.Windows.Forms.PictureBox backButt3;
     }
 }
 

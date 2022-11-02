@@ -109,6 +109,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] bgMusic {
+            get {
+                object obj = ResourceManager.GetObject("bgMusic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap city {

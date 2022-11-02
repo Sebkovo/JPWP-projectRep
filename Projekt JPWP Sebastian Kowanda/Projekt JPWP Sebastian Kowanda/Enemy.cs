@@ -23,6 +23,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public int power;
         protected override void OnClick(EventArgs e)
         {
+            parentRef.audOut1.Play();
             base.OnClick(e);    //Without this line, the event won't be fired
             EHealthBar.Maximum = health;
             EHealthBar.Value = health;

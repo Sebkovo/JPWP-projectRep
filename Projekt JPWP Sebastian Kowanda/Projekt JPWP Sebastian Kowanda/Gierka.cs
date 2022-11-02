@@ -28,6 +28,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public Image EnemyImageVar;
         private bool isCalc = false;
         private int answer;
+        public WaveOut audOut1 = new WaveOut();
+        public WaveOut audOut2= new WaveOut();
+        private WaveStream stream1 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
+        private WaveStream stream2 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\Aaaaaah.wav");
         SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
         List<City> cities_Array = new List<City>();
         List<Enemy> enemy_Array = new List<Enemy>();
@@ -46,6 +50,18 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void Giera_Load(object sender, EventArgs e)
         {
+            if (stream1 != null)
+            {
+                audOut1.Init(stream1);
+            }
+            if (stream2 != null)
+            {
+                audOut2.Init(stream2);
+            }
+            
+            
+            audOut1.Play();
+
             dayNightTimer.Start();
             //działa, do usunięcia w swoim czasie
             item itw = new item("sword", "23");
@@ -222,7 +238,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             }
             else if (e.KeyCode == Keys.G)
             {
-                simpleSound.Play();
                 Enemy newE = new Enemy();
                  //MessageBox.Show(square_size.ToString());
                  newE.writeParam(mainScreen, EHealthTXT, EPowerTXT, ENameTXT, EHealthBar, this);
@@ -297,7 +312,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void gearIcon_Click(object sender, EventArgs e)
         {
-
+            mainScreen.SelectTab(5);
+            activeTab = 5;
         }
 
         private void backpackIcon_Click(object sender, EventArgs e)
@@ -463,6 +479,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public void disposeMe(WaveOut obj)
         {
             obj.Dispose();
+        }
+
+        private void backButt3_Click(object sender, EventArgs e)
+        {
+            mainScreen.SelectTab(0);
+            activeTab = 0;
         }
     }
 }

@@ -76,7 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="audioAah.cs" />
     <Compile Include="City.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -178,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Audio\Aaaaaah.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\bgMusic.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
