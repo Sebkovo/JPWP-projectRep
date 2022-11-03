@@ -23,7 +23,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public int power;
         protected override void OnClick(EventArgs e)
         {
-            parentRef.audOut1.Play();
+            if(parentRef.audOut2.PlaybackState is NAudio.Wave.PlaybackState.Playing)
+            {
+                parentRef.audOut2.Stop();
+            }
+            parentRef.stream2.CurrentTime = new TimeSpan(0L);
+            parentRef.audOut2.Play();
             base.OnClick(e);    //Without this line, the event won't be fired
             EHealthBar.Maximum = health;
             EHealthBar.Value = health;

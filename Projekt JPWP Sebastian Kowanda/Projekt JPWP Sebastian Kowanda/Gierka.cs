@@ -30,8 +30,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private int answer;
         public WaveOut audOut1 = new WaveOut();
         public WaveOut audOut2= new WaveOut();
-        private WaveStream stream1 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
-        private WaveStream stream2 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\Aaaaaah.wav");
+        private WaveStream stream1 = new Mp3FileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
+        public WaveStream stream2 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\Aaaaaah.wav");
         SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
         List<City> cities_Array = new List<City>();
         List<Enemy> enemy_Array = new List<Enemy>();
@@ -61,7 +61,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             
             
             audOut1.Play();
-
             dayNightTimer.Start();
             //działa, do usunięcia w swoim czasie
             item itw = new item("sword", "23");
@@ -485,6 +484,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         {
             mainScreen.SelectTab(0);
             activeTab = 0;
+        }
+
+        private void musicVolumeSlider_VolumeChanged(object sender, EventArgs e)
+        {
+            audOut1.Volume = musicVolumeSlider.Volume;
+        }
+
+        private void soundVolumeSlider_VolumeChanged(object sender, EventArgs e)
+        {
+            audOut2.Volume = soundVolumeSlider.Volume;
         }
     }
 }

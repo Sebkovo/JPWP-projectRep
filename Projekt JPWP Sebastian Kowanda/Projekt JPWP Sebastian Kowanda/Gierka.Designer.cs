@@ -74,6 +74,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.EnemyHealthConstTXT = new System.Windows.Forms.Label();
             this.EnemyImage = new System.Windows.Forms.PictureBox();
             this.menuTab = new System.Windows.Forms.TabPage();
+            this.optionsTab = new System.Windows.Forms.TabPage();
+            this.backButt3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backpackIcon = new System.Windows.Forms.PictureBox();
@@ -81,8 +83,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTimer = new System.Windows.Forms.Timer(this.components);
             this.dmgTimer = new System.Windows.Forms.Timer(this.components);
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
-            this.optionsTab = new System.Windows.Forms.TabPage();
-            this.backButt3 = new System.Windows.Forms.PictureBox();
+            this.optionsConstTxT = new System.Windows.Forms.Label();
+            this.musicVolumeSlider = new NAudio.Gui.VolumeSlider();
+            this.optionsConstTxt2 = new System.Windows.Forms.Label();
+            this.soundVolumeSlider = new NAudio.Gui.VolumeSlider();
             this.mainScreen.SuspendLayout();
             this.planszaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).BeginInit();
@@ -95,11 +99,11 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.exerciseTxtPanel.SuspendLayout();
             this.fightInfoTxtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnemyImage)).BeginInit();
+            this.optionsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).BeginInit();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).BeginInit();
-            this.optionsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -608,6 +612,35 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.menuTab.Text = "tabPage1";
             this.menuTab.UseVisualStyleBackColor = true;
             // 
+            // optionsTab
+            // 
+            this.optionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.optionsTab.Controls.Add(this.soundVolumeSlider);
+            this.optionsTab.Controls.Add(this.optionsConstTxt2);
+            this.optionsTab.Controls.Add(this.musicVolumeSlider);
+            this.optionsTab.Controls.Add(this.optionsConstTxT);
+            this.optionsTab.Controls.Add(this.backButt3);
+            this.optionsTab.Location = new System.Drawing.Point(4, 4);
+            this.optionsTab.Name = "optionsTab";
+            this.optionsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.optionsTab.Size = new System.Drawing.Size(1269, 994);
+            this.optionsTab.TabIndex = 5;
+            this.optionsTab.Text = "optionsTab";
+            // 
+            // backButt3
+            // 
+            this.backButt3.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Location = new System.Drawing.Point(11, 18);
+            this.backButt3.Margin = new System.Windows.Forms.Padding(2);
+            this.backButt3.Name = "backButt3";
+            this.backButt3.Size = new System.Drawing.Size(22, 24);
+            this.backButt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButt3.TabIndex = 3;
+            this.backButt3.TabStop = false;
+            this.backButt3.Click += new System.EventHandler(this.backButt3_Click);
+            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -667,30 +700,41 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightTimer.Interval = 1000;
             this.dayNightTimer.Tick += new System.EventHandler(this.dayNightTimer_Tick);
             // 
-            // optionsTab
+            // optionsConstTxT
             // 
-            this.optionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.optionsTab.Controls.Add(this.backButt3);
-            this.optionsTab.Location = new System.Drawing.Point(4, 4);
-            this.optionsTab.Name = "optionsTab";
-            this.optionsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.optionsTab.Size = new System.Drawing.Size(1269, 994);
-            this.optionsTab.TabIndex = 5;
-            this.optionsTab.Text = "optionsTab";
+            this.optionsConstTxT.AutoSize = true;
+            this.optionsConstTxT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.optionsConstTxT.Location = new System.Drawing.Point(414, 68);
+            this.optionsConstTxT.Name = "optionsConstTxT";
+            this.optionsConstTxT.Size = new System.Drawing.Size(147, 25);
+            this.optionsConstTxT.TabIndex = 4;
+            this.optionsConstTxT.Text = "Music Volume";
             // 
-            // backButt3
+            // musicVolumeSlider
             // 
-            this.backButt3.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.Location = new System.Drawing.Point(11, 18);
-            this.backButt3.Margin = new System.Windows.Forms.Padding(2);
-            this.backButt3.Name = "backButt3";
-            this.backButt3.Size = new System.Drawing.Size(22, 24);
-            this.backButt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButt3.TabIndex = 3;
-            this.backButt3.TabStop = false;
-            this.backButt3.Click += new System.EventHandler(this.backButt3_Click);
+            this.musicVolumeSlider.Location = new System.Drawing.Point(389, 96);
+            this.musicVolumeSlider.Name = "musicVolumeSlider";
+            this.musicVolumeSlider.Size = new System.Drawing.Size(196, 18);
+            this.musicVolumeSlider.TabIndex = 5;
+            this.musicVolumeSlider.VolumeChanged += new System.EventHandler(this.musicVolumeSlider_VolumeChanged);
+            // 
+            // optionsConstTxt2
+            // 
+            this.optionsConstTxt2.AutoSize = true;
+            this.optionsConstTxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.optionsConstTxt2.Location = new System.Drawing.Point(414, 131);
+            this.optionsConstTxt2.Name = "optionsConstTxt2";
+            this.optionsConstTxt2.Size = new System.Drawing.Size(152, 25);
+            this.optionsConstTxt2.TabIndex = 6;
+            this.optionsConstTxt2.Text = "Sound Volume";
+            // 
+            // soundVolumeSlider
+            // 
+            this.soundVolumeSlider.Location = new System.Drawing.Point(389, 159);
+            this.soundVolumeSlider.Name = "soundVolumeSlider";
+            this.soundVolumeSlider.Size = new System.Drawing.Size(196, 18);
+            this.soundVolumeSlider.TabIndex = 7;
+            this.soundVolumeSlider.VolumeChanged += new System.EventHandler(this.soundVolumeSlider_VolumeChanged);
             // 
             // Gierka
             // 
@@ -720,11 +764,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.exerciseTxtPanel.ResumeLayout(false);
             this.fightInfoTxtPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EnemyImage)).EndInit();
+            this.optionsTab.ResumeLayout(false);
+            this.optionsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).EndInit();
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).EndInit();
-            this.optionsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.backButt3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -784,6 +829,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TabPage optionsTab;
         private System.Windows.Forms.PictureBox backButt3;
+        private NAudio.Gui.VolumeSlider soundVolumeSlider;
+        private System.Windows.Forms.Label optionsConstTxt2;
+        private NAudio.Gui.VolumeSlider musicVolumeSlider;
+        private System.Windows.Forms.Label optionsConstTxT;
     }
 }
 
