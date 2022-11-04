@@ -475,10 +475,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 }
             }
         }
-        public void disposeMe(WaveOut obj)
-        {
-            obj.Dispose();
-        }
 
         private void backButt3_Click(object sender, EventArgs e)
         {
