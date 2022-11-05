@@ -53,8 +53,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     parentRef.SetEnemyImage(Resources.city);
                     break;
             }
-            parente.SelectTab(3);
-            parentRef.activeTab = 3;
+            parente.SelectTab(4);
+            parentRef.activeTab = 4;
 
         }
         public void writeParam(TabControl parent1, Label healtLab1, Label powerLab1, Label nameLab1,ProgressBar EHealthBar1, Gierka parent)

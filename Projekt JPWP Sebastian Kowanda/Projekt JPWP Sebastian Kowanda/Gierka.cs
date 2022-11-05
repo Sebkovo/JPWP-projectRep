@@ -44,8 +44,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void backButt1_Click(object sender, EventArgs e)
         {
-            mainScreen.SelectTab(0);
-            activeTab = 0;
+            mainScreen.SelectTab(activeTab);
         }
 
         private void Giera_Load(object sender, EventArgs e)
@@ -163,7 +162,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             }
             else if (e.KeyCode == Keys.Enter)
             {
-                if (activeTab == 0) { 
+                if (activeTab == 1) { 
                 City noweM = new City();
                 //MessageBox.Show(square_size.ToString());
                 noweM.writeParam(mainScreen, monTXT, levTXT, this);
@@ -312,19 +311,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void gearIcon_Click(object sender, EventArgs e)
         {
             mainScreen.SelectTab(5);
-            activeTab = 5;
         }
 
         private void backpackIcon_Click(object sender, EventArgs e)
         {
-            mainScreen.SelectTab(2);
-            activeTab = 2;
+            mainScreen.SelectTab(3);
         }
 
         private void backButt2_Click(object sender, EventArgs e)
         {
-            mainScreen.SelectTab(0);
-            activeTab = 0;
+            mainScreen.SelectTab(activeTab);
         }
         //block column resizing
         private void itemsList_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -415,9 +411,20 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 isCalc = false;
                 if (answerBox.Text == answer.ToString())
                 {
+
                     fightInfoTXT.Text = "Dobrze!"+' '+ Math.Floor((double)ticks / 10).ToString() + ':' + (ticks - (Math.Floor((double)ticks / 10)) * 10).ToString()+'s';
-                    EHealthBar.Value -= (int)Math.Round((20 - 2 * (double)ticks / 10));
-                    EHealthTXT.Text = EHealthBar.Value.ToString() + '/' + EHealthBar.Maximum.ToString();
+                    if ((EHealthBar.Value - (int)Math.Round((20 - 2 * (double)ticks / 10)))>0)
+                    {
+                        EHealthBar.Value -= (int)Math.Round((20 - 2 * (double)ticks / 10));
+                        EHealthTXT.Text = EHealthBar.Value.ToString() + '/' + EHealthBar.Maximum.ToString();
+                    }
+                    else
+                    {
+                        EHealthBar.Value = 0;
+                        EHealthTXT.Text = "0 / " + EHealthBar.Maximum.ToString();
+                        //case of winning
+                    }
+                    
                     EDamageTXT.Text = '-' + Math.Round((20 - 2 * (double)ticks / 10)).ToString();
                     EDamageTXT.Visible = true;
                     dmgTimer.Start();
@@ -425,8 +432,18 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 else
                 {
                     fightInfoTXT.Text = "Żle!";
-                    YHealthBar.Value -= (int)Math.Round((double.Parse(EPowerTXT.Text) / double.Parse(YPowerTXT.Text) * 4) + 5);
-                    YHealthTXT.Text = YHealthBar.Value.ToString() + '/' + YHealthBar.Maximum.ToString();
+                    if ((YHealthBar.Value - (int)Math.Round((double.Parse(EPowerTXT.Text) / double.Parse(YPowerTXT.Text) * 4) + 5))>0)
+                    {
+                        YHealthBar.Value -= (int)Math.Round((double.Parse(EPowerTXT.Text) / double.Parse(YPowerTXT.Text) * 4) + 5);
+                        YHealthTXT.Text = YHealthBar.Value.ToString() + '/' + YHealthBar.Maximum.ToString();
+                    }
+                    else
+                    {
+                        YHealthBar.Value = 0;
+                        YHealthTXT.Text = "0 / " + YHealthBar.Maximum.ToString();
+                        //case of loosing
+                    }
+                    
                     YDamageTXT.Text = '-'+Math.Round((double.Parse(EPowerTXT.Text) / double.Parse(YPowerTXT.Text) * 4) + 5).ToString();
                     YDamageTXT.Visible = true;
                     dmgTimer.Start();
@@ -478,8 +495,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void backButt3_Click(object sender, EventArgs e)
         {
-            mainScreen.SelectTab(0);
-            activeTab = 0;
+            mainScreen.SelectTab(activeTab);
         }
 
         private void musicVolumeSlider_VolumeChanged(object sender, EventArgs e)
@@ -487,9 +503,34 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             audOut1.Volume = musicVolumeSlider.Volume;
         }
 
-        private void soundVolumeSlider_VolumeChanged(object sender, EventArgs e)
+        private void menuPullButt_Click(object sender, EventArgs e)
         {
-            audOut2.Volume = soundVolumeSlider.Volume;
+            if (sideStripMenu.Location.X == 1237)
+            {
+                sideStripMenu.Location = new Point(1137, sideStripMenu.Location.Y);
+            }
+            else
+            {
+                sideStripMenu.Location = new Point(1237, sideStripMenu.Location.Y);
+            }
+            
+        }
+
+        private void startButt_Click(object sender, EventArgs e)
+        {
+            mainScreen.SelectTab(1);
+            activeTab = 1;
+            sideStripMenu.Visible = true;
+        }
+
+        private void optionsButt_Click(object sender, EventArgs e)
+        {
+            mainScreen.SelectTab(5);
+        }
+
+        private void exitButt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

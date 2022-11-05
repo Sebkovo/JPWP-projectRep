@@ -24,8 +24,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             base.OnClick(e);    //Without this line, the event won't be fired
             if(parente!= null)
             {
-                parente.SelectTab(1);
-                parentRef.activeTab = 1;
+                parente.SelectTab(2);
                 monLab.Text = money.ToString();
                 levLab.Text = level.ToString();
             }
