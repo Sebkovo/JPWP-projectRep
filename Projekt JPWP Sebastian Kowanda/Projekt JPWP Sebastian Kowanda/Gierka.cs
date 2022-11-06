@@ -357,7 +357,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 exerciseTXT.Visible = true;
                 answerBox.Visible = true;
                 answerBox.Focus();
-                ENameTXT.Text = exerciseTXT.Focused.ToString();
                 fightInfoTXT.Text = "Do the math!  "+ Math.Floor((double)ticks / 10).ToString()+':'+(ticks-(Math.Floor((double)ticks/10))*10).ToString();
                 if(Math.Floor((double)ticks / 10) >= Int16.Parse(secondsForResponseTXT.Text))
                 {
