@@ -78,10 +78,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             string[] ok4 = { "", itw.name, itw.value };
              toList = new ListViewItem(ok4);
             itemsList.Items.Add(toList);
-            foreach (ListViewItem temp in itemsList.Items)
+            /*foreach (ListViewItem temp in itemsList.Items)
             {
-                //MessageBox.Show(temp.ToString());
-            }
+                MessageBox.Show(temp.SubItems[1].Text);
+            }*/
 
             //help for using functions
             //MessageBox.Show(itemsList.Items[1].SubItems[1].Text);
@@ -93,6 +93,308 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
 
         }
+        private void getLoot(string Ename)
+        {
+            Random r1 = new Random();
+            int ran4 = r1.Next(1, 6);
+            int ran5 = r1.Next(1, 4);
+            int ran6 = r1.Next(0, 3);
+            string textToShow = "Loot found: \n";
+            bool added = false;
+            switch (Ename)
+            {
+                case "Angry Slime":
+                    if (ran4 != 0)
+                    {
+                        textToShow += ran4.ToString() + " Slime essence"+ "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Slime essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran4).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Slime essence", "2");
+                            string[] ok = { "", itw.name, itw.value, ran4.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran5 != 0)
+                    {
+                        textToShow += ran5.ToString() + " Angry essence" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Angry essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Angry essence", "5");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    fightInfoTXT.Text = textToShow;
+                    break;
+                case "Happy Slime":
+                    if (ran4 != 0)
+                    {
+                        textToShow += ran4.ToString() + " Slime essence" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Slime essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran4).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Slime essence", "2");
+                            string[] ok = { "", itw.name, itw.value, ran4.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran5 != 0)
+                    {
+                        textToShow += ran5.ToString() + " Happy essence" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Happy essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Happy essence", "5");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    fightInfoTXT.Text = textToShow;
+                    break;
+                case "Weird Slime":
+                    if (ran4 != 0)
+                    {
+                        textToShow += ran4.ToString() + " Slime essence" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Slime essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran4).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Slime essence", "2");
+                            string[] ok = { "", itw.name, itw.value, ran4.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran5 != 0)
+                    {
+                        textToShow += ran5.ToString() + " Weird essence" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Weird essence")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Weird essence", "5");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    fightInfoTXT.Text = textToShow;
+                    break;
+                case "Lesser Dragon":
+                    if (ran6 != 0)
+                    {
+                        textToShow += ran6.ToString() + " Dragon scale" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Dragon scale")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran6).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Dragon scale", "20");
+                            string[] ok = { "", itw.name, itw.value, ran6.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran6 != 0)
+                    {
+                        textToShow += ran6.ToString() + " Dragon blood" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Dragon blood")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran6).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Dragon blood", "20");
+                            string[] ok = { "", itw.name, itw.value, ran6.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    fightInfoTXT.Text = textToShow;
+                    break;
+                case "Dragon":
+                    if (ran5 != 0)
+                    {
+                        textToShow += ran5.ToString() + " Dragon scale" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Dragon scale")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Dragon scale", "20");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran5 != 0)
+                    {
+                        textToShow += ran5.ToString() + " Dragon blood" + "\n";
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Dragon blood")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Dragon blood", "20");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    fightInfoTXT.Text = textToShow;
+                    break;
+                case "Cave":
+                    if (ran5 != 0)
+                    {
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Sand")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Sand", "1");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    if (ran6 != 0)
+                    {
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Steel")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran6).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Steel", "4");
+                            string[] ok = { "", itw.name, itw.value, ran6.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    break;
+                case "Lumber mill":
+                    if (ran5 != 0)
+                    {
+                        foreach (ListViewItem temp in itemsList.Items)
+                        {
+                            if (temp.SubItems[1].Text == "Wood")
+                            {
+                                temp.SubItems[3].Text = (Int16.Parse(temp.SubItems[3].Text) + ran5).ToString();
+                                added = true;
+                                break;
+                            }
+                        }
+                        if (!added)
+                        {
+                            item itw = new item("Wood", "1");
+                            string[] ok = { "", itw.name, itw.value, ran5.ToString() };
+                            var toList = new ListViewItem(ok);
+                            itemsList.Items.Add(toList);
+                        }
+                        added = false;
+                    }
+                    break;
+            }
+        }
+
         private (string, int) genExerEASY()
         {
             Random r = new Random();
@@ -386,13 +688,26 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void fleeButt_Click(object sender, EventArgs e)
         {
-
+            Random leme = new Random();
+            int rand1 = leme.Next(1, 1000);
+            if (rand1 <= 300)       //30% for fleeing
+            {
+                fightInfoTXT.Text = "Succesfully fled! \n You can leave now";
+                fightLeaveButt.Visible = true;
+                AttackButt.Visible = false;
+            }
+            else
+            {
+                fightInfoTXT.Text = "Fleeing failed! \n You can't try anymore";
+                fleeButt.Visible = false;
+            }
         }
 
         private void fightTab_Enter(object sender, EventArgs e)
         {
             fightInfoTXT.Text = "What to do?";
-            YHealthTXT.Text = playerHealth.ToString() + '/' + playerHealth.ToString();
+            MessageBox.Show(playerHealth.ToString());
+            YHealthTXT.Text = YHealthBar.Value.ToString() + '/' + playerHealth.ToString();
             YPowerTXT.Text = playerPower.ToString();
             secondsForResponseTXT.Text = Math.Round((double.Parse(YPowerTXT.Text)/ double.Parse(EPowerTXT.Text)*4)+5).ToString();
         }
@@ -421,6 +736,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         EHealthBar.Value = 0;
                         EHealthTXT.Text = "0 / " + EHealthBar.Maximum.ToString();
+                        getLoot(ENameTXT.Text);
+                        fightLeaveButt.Visible = true;
                         //case of winning
                     }
                     
@@ -440,6 +757,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         YHealthBar.Value = 0;
                         YHealthTXT.Text = "0 / " + YHealthBar.Maximum.ToString();
+                        fightLeaveButt.Visible = true;
                         //case of loosing
                     }
                     
@@ -530,6 +848,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void exitButt_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void fightLeaveButt_Click(object sender, EventArgs e)
+        {
+            mainScreen.SelectTab(1);
+            activeTab = 1;
+            fightLeaveButt.Visible = false;
+            AttackButt.Visible = true;
+            fleeButt.Visible = true;
+
         }
     }
 }

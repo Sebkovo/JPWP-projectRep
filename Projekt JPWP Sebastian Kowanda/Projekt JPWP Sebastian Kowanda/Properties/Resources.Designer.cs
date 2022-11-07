@@ -221,16 +221,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Retard_Slime {
-            get {
-                object obj = ResourceManager.GetObject("Retard_Slime", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Slime_Icon {
             get {
                 object obj = ResourceManager.GetObject("Slime_Icon", resourceCulture);
@@ -254,6 +244,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap warrior_with_sword_and_shield {
             get {
                 object obj = ResourceManager.GetObject("warrior_with_sword_and_shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weird_Slime {
+            get {
+                object obj = ResourceManager.GetObject("Weird_Slime", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

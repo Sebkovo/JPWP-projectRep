@@ -142,7 +142,7 @@
   <data name="Happy_Slime" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Happy_Slime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Retard_Slime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Weird_Slime" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Retard_Slime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Slime_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">

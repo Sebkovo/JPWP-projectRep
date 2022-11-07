@@ -43,8 +43,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 case "Happy Slime":
                     parentRef.SetEnemyImage(Resources.Happy_Slime);
                     break;
-                case "Retarded Slime":
-                    parentRef.SetEnemyImage(Resources.Retard_Slime);
+                case "Weird Slime":
+                    parentRef.SetEnemyImage(Resources.Weird_Slime);
                     break;
                 case "Lesser Dragon":
                     parentRef.SetEnemyImage(Resources.Lesser_Dragon);
@@ -89,7 +89,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                             name = "Happy Slime";
                             break;
                         case 2:
-                            name = "Retarded Slime";
+                            name = "Weird Slime";
                             break;
                     }
                     health = r.Next(70, 120);
