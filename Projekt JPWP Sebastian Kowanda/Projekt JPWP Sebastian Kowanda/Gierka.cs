@@ -49,6 +49,13 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void Giera_Load(object sender, EventArgs e)
         {
+            craftConstTxt.Visible = false;
+            craftIng1Txt.Text = "";
+            craftIng2Txt.Text = "";
+            craftIng3Txt.Text = "";
+            craftIng4Txt.Text = "";
+            craftButt.Visible = false;
+
             if (stream1 != null)
             {
                 audOut1.Init(stream1);
@@ -66,18 +73,59 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             string[] ok = {"" ,itw.name, itw.value };
             var toList = new ListViewItem(ok);
             itemsList.Items.Add(toList);
-             itw = new item("iron", "5");
-            string[] ok2 = { "", itw.name, itw.value };
+             itw = new item("Wood", "5");
+            string[] ok2 = { "", itw.name, itw.value,"10" };
              toList = new ListViewItem(ok2);
             itemsList.Items.Add(toList);
-             itw = new item("faa", "dziala");
-            string[] ok3 = { "", itw.name, itw.value };
+             itw = new item("Steel", "dziala");
+            string[] ok3 = { "", itw.name, itw.value, "20"};
              toList = new ListViewItem(ok3);
             itemsList.Items.Add(toList);
              itw = new item("nice", "dziala");
             string[] ok4 = { "", itw.name, itw.value };
              toList = new ListViewItem(ok4);
             itemsList.Items.Add(toList);
+
+            ok2[0] = "";
+            ok2[1] = "Wooden Sword";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Steel Sword";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Wooden Armor";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Steel Armor";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Potion1";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Potion2";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Potion3";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
+            ok2[0] = "";
+            ok2[1] = "Potion4";
+            ok2[2] = "";
+            toList = new ListViewItem(ok2);
+            craftingCityList.Items.Add(toList);
             /*foreach (ListViewItem temp in itemsList.Items)
             {
                 MessageBox.Show(temp.SubItems[1].Text);
@@ -93,6 +141,89 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
 
         }
+        private void setCraftingRequirements(string Item)
+        {
+            bool enough1 = false;
+            bool enough2 = false;
+            bool enough3 = false;
+            int allfound = 0;
+            switch (Item)
+            {
+                case "Wooden Sword":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Wood":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Steel":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 2)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound==2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Wood 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Steel 2";
+                    if (Int16.Parse(levTXT.Text) >= 2)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 10";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 10))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Steel Sword":
+
+                    break;
+                case "Wooden Armor":
+
+                    break;
+                case "Steel Armor":
+
+                    break;
+
+            }
+        }
+
         private void getLoot(string Ename)
         {
             Random r1 = new Random();
@@ -706,7 +837,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void fightTab_Enter(object sender, EventArgs e)
         {
             fightInfoTXT.Text = "What to do?";
-            MessageBox.Show(playerHealth.ToString());
             YHealthTXT.Text = YHealthBar.Value.ToString() + '/' + playerHealth.ToString();
             YPowerTXT.Text = playerPower.ToString();
             secondsForResponseTXT.Text = Math.Round((double.Parse(YPowerTXT.Text)/ double.Parse(EPowerTXT.Text)*4)+5).ToString();
@@ -858,6 +988,41 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             AttackButt.Visible = true;
             fleeButt.Visible = true;
 
+        }
+
+        private void craftingCityList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (craftingCityList.SelectedIndices.Count != 0)
+            {
+                setCraftingRequirements(craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text);
+            }
+            else
+            {
+                craftButt.Visible = false;
+                craftIng1Txt.Text = "";
+                craftIng2Txt.Text = "";
+                craftIng3Txt.Text = "";
+                craftIng4Txt.Text = "";
+                craftConstTxt.Visible = false;
+            }
+                    
+        }
+
+        private void craftingCityList_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (craftingCityList.SelectedIndices.Count != 0)
+            {
+                setCraftingRequirements(craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text);
+            }
+            else
+            {
+                craftButt.Visible = false;
+                craftIng1Txt.Text = "";
+                craftIng2Txt.Text = "";
+                craftIng3Txt.Text = "";
+                craftIng4Txt.Text = "";
+                craftConstTxt.Visible = false;
+            }
         }
     }
 }

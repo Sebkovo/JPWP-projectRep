@@ -38,7 +38,23 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.startButt = new System.Windows.Forms.PictureBox();
             this.planszaTab = new System.Windows.Forms.TabPage();
             this.Warrior = new System.Windows.Forms.PictureBox();
-            this.cityInfo = new System.Windows.Forms.TabPage();
+            this.cityInfoTab = new System.Windows.Forms.TabPage();
+            this.craftButt = new System.Windows.Forms.Button();
+            this.craftIngrPanel = new System.Windows.Forms.Panel();
+            this.craftIng3Txt = new System.Windows.Forms.Label();
+            this.craftIng2Txt = new System.Windows.Forms.Label();
+            this.craftIng1Txt = new System.Windows.Forms.Label();
+            this.craftConstTxt = new System.Windows.Forms.Label();
+            this.craftingCityConstTxt = new System.Windows.Forms.Label();
+            this.craftingCityList = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TradeConstTxt = new System.Windows.Forms.Label();
+            this.cityTradeList = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.monTXT = new System.Windows.Forms.Label();
             this.levTXT = new System.Windows.Forms.Label();
             this.levConstTXT = new System.Windows.Forms.Label();
@@ -52,6 +68,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.fightTab = new System.Windows.Forms.TabPage();
+            this.fightLeaveButt = new System.Windows.Forms.PictureBox();
             this.YDamageTXT = new System.Windows.Forms.Label();
             this.EDamageTXT = new System.Windows.Forms.Label();
             this.EnemyNameTxtPanel = new System.Windows.Forms.Panel();
@@ -91,7 +108,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
             this.menuPullButt = new System.Windows.Forms.Panel();
             this.sideStripMenu = new System.Windows.Forms.Panel();
-            this.fightLeaveButt = new System.Windows.Forms.PictureBox();
+            this.craftIng4Txt = new System.Windows.Forms.Label();
             this.mainScreen.SuspendLayout();
             this.menuTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitButt)).BeginInit();
@@ -100,11 +117,13 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             ((System.ComponentModel.ISupportInitialize)(this.startButt)).BeginInit();
             this.planszaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).BeginInit();
-            this.cityInfo.SuspendLayout();
+            this.cityInfoTab.SuspendLayout();
+            this.craftIngrPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButt1)).BeginInit();
             this.backpackTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButt2)).BeginInit();
             this.fightTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).BeginInit();
             this.EnemyNameTxtPanel.SuspendLayout();
             this.exerciseTxtPanel.SuspendLayout();
             this.fightInfoTxtPanel.SuspendLayout();
@@ -115,7 +134,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).BeginInit();
             this.sideStripMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -123,7 +141,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.mainScreen.Alignment = System.Windows.Forms.TabAlignment.Right;
             this.mainScreen.Controls.Add(this.menuTab);
             this.mainScreen.Controls.Add(this.planszaTab);
-            this.mainScreen.Controls.Add(this.cityInfo);
+            this.mainScreen.Controls.Add(this.cityInfoTab);
             this.mainScreen.Controls.Add(this.backpackTab);
             this.mainScreen.Controls.Add(this.fightTab);
             this.mainScreen.Controls.Add(this.optionsTab);
@@ -215,26 +233,196 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.Warrior.TabIndex = 0;
             this.Warrior.TabStop = false;
             // 
-            // cityInfo
+            // cityInfoTab
             // 
-            this.cityInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cityInfo.Controls.Add(this.monTXT);
-            this.cityInfo.Controls.Add(this.levTXT);
-            this.cityInfo.Controls.Add(this.levConstTXT);
-            this.cityInfo.Controls.Add(this.moneyConstTXT);
-            this.cityInfo.Controls.Add(this.backButt1);
-            this.cityInfo.Location = new System.Drawing.Point(4, 4);
-            this.cityInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.cityInfo.Name = "cityInfo";
-            this.cityInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.cityInfo.Size = new System.Drawing.Size(1269, 994);
-            this.cityInfo.TabIndex = 1;
+            this.cityInfoTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cityInfoTab.Controls.Add(this.craftButt);
+            this.cityInfoTab.Controls.Add(this.craftIngrPanel);
+            this.cityInfoTab.Controls.Add(this.craftingCityConstTxt);
+            this.cityInfoTab.Controls.Add(this.craftingCityList);
+            this.cityInfoTab.Controls.Add(this.TradeConstTxt);
+            this.cityInfoTab.Controls.Add(this.cityTradeList);
+            this.cityInfoTab.Controls.Add(this.monTXT);
+            this.cityInfoTab.Controls.Add(this.levTXT);
+            this.cityInfoTab.Controls.Add(this.levConstTXT);
+            this.cityInfoTab.Controls.Add(this.moneyConstTXT);
+            this.cityInfoTab.Controls.Add(this.backButt1);
+            this.cityInfoTab.Location = new System.Drawing.Point(4, 4);
+            this.cityInfoTab.Margin = new System.Windows.Forms.Padding(2);
+            this.cityInfoTab.Name = "cityInfoTab";
+            this.cityInfoTab.Padding = new System.Windows.Forms.Padding(2);
+            this.cityInfoTab.Size = new System.Drawing.Size(1269, 994);
+            this.cityInfoTab.TabIndex = 1;
+            // 
+            // craftButt
+            // 
+            this.craftButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftButt.Location = new System.Drawing.Point(725, 702);
+            this.craftButt.Name = "craftButt";
+            this.craftButt.Size = new System.Drawing.Size(126, 55);
+            this.craftButt.TabIndex = 10;
+            this.craftButt.Text = "Craft";
+            this.craftButt.UseVisualStyleBackColor = true;
+            // 
+            // craftIngrPanel
+            // 
+            this.craftIngrPanel.Controls.Add(this.craftIng4Txt);
+            this.craftIngrPanel.Controls.Add(this.craftIng3Txt);
+            this.craftIngrPanel.Controls.Add(this.craftIng2Txt);
+            this.craftIngrPanel.Controls.Add(this.craftIng1Txt);
+            this.craftIngrPanel.Controls.Add(this.craftConstTxt);
+            this.craftIngrPanel.Location = new System.Drawing.Point(960, 482);
+            this.craftIngrPanel.Name = "craftIngrPanel";
+            this.craftIngrPanel.Size = new System.Drawing.Size(210, 203);
+            this.craftIngrPanel.TabIndex = 9;
+            // 
+            // craftIng3Txt
+            // 
+            this.craftIng3Txt.AutoSize = true;
+            this.craftIng3Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftIng3Txt.Location = new System.Drawing.Point(12, 82);
+            this.craftIng3Txt.Name = "craftIng3Txt";
+            this.craftIng3Txt.Size = new System.Drawing.Size(53, 25);
+            this.craftIng3Txt.TabIndex = 3;
+            this.craftIng3Txt.Text = "ing1";
+            // 
+            // craftIng2Txt
+            // 
+            this.craftIng2Txt.AutoSize = true;
+            this.craftIng2Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftIng2Txt.Location = new System.Drawing.Point(12, 58);
+            this.craftIng2Txt.Name = "craftIng2Txt";
+            this.craftIng2Txt.Size = new System.Drawing.Size(53, 25);
+            this.craftIng2Txt.TabIndex = 2;
+            this.craftIng2Txt.Text = "ing1";
+            // 
+            // craftIng1Txt
+            // 
+            this.craftIng1Txt.AutoSize = true;
+            this.craftIng1Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftIng1Txt.Location = new System.Drawing.Point(12, 33);
+            this.craftIng1Txt.Name = "craftIng1Txt";
+            this.craftIng1Txt.Size = new System.Drawing.Size(53, 25);
+            this.craftIng1Txt.TabIndex = 1;
+            this.craftIng1Txt.Text = "ing1";
+            // 
+            // craftConstTxt
+            // 
+            this.craftConstTxt.AutoSize = true;
+            this.craftConstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftConstTxt.Location = new System.Drawing.Point(25, 5);
+            this.craftConstTxt.Name = "craftConstTxt";
+            this.craftConstTxt.Size = new System.Drawing.Size(151, 25);
+            this.craftConstTxt.TabIndex = 0;
+            this.craftConstTxt.Text = "Requirements:";
+            // 
+            // craftingCityConstTxt
+            // 
+            this.craftingCityConstTxt.AutoSize = true;
+            this.craftingCityConstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftingCityConstTxt.Location = new System.Drawing.Point(611, 437);
+            this.craftingCityConstTxt.Name = "craftingCityConstTxt";
+            this.craftingCityConstTxt.Size = new System.Drawing.Size(340, 42);
+            this.craftingCityConstTxt.TabIndex = 8;
+            this.craftingCityConstTxt.Text = "Available craftings";
+            // 
+            // craftingCityList
+            // 
+            this.craftingCityList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.craftingCityList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.craftingCityList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.craftingCityList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftingCityList.FullRowSelect = true;
+            this.craftingCityList.GridLines = true;
+            this.craftingCityList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.craftingCityList.HideSelection = false;
+            this.craftingCityList.LabelWrap = false;
+            this.craftingCityList.Location = new System.Drawing.Point(633, 482);
+            this.craftingCityList.MultiSelect = false;
+            this.craftingCityList.Name = "craftingCityList";
+            this.craftingCityList.Size = new System.Drawing.Size(297, 203);
+            this.craftingCityList.TabIndex = 7;
+            this.craftingCityList.TabStop = false;
+            this.craftingCityList.UseCompatibleStateImageBehavior = false;
+            this.craftingCityList.View = System.Windows.Forms.View.Details;
+            this.craftingCityList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.craftingCityList_ItemSelectionChanged);
+            this.craftingCityList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.craftingCityList_MouseDown);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "";
+            this.columnHeader5.Width = 0;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Item";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 296;
+            // 
+            // TradeConstTxt
+            // 
+            this.TradeConstTxt.AutoSize = true;
+            this.TradeConstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TradeConstTxt.Location = new System.Drawing.Point(287, 149);
+            this.TradeConstTxt.Name = "TradeConstTxt";
+            this.TradeConstTxt.Size = new System.Drawing.Size(121, 42);
+            this.TradeConstTxt.TabIndex = 6;
+            this.TradeConstTxt.Text = "Trade";
+            // 
+            // cityTradeList
+            // 
+            this.cityTradeList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cityTradeList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cityTradeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.cityTradeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cityTradeList.FullRowSelect = true;
+            this.cityTradeList.GridLines = true;
+            this.cityTradeList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.cityTradeList.HideSelection = false;
+            this.cityTradeList.LabelWrap = false;
+            this.cityTradeList.Location = new System.Drawing.Point(92, 199);
+            this.cityTradeList.MultiSelect = false;
+            this.cityTradeList.Name = "cityTradeList";
+            this.cityTradeList.Size = new System.Drawing.Size(480, 486);
+            this.cityTradeList.TabIndex = 5;
+            this.cityTradeList.TabStop = false;
+            this.cityTradeList.UseCompatibleStateImageBehavior = false;
+            this.cityTradeList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 0;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Items";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 296;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Value";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 85;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Count";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 95;
             // 
             // monTXT
             // 
             this.monTXT.AutoSize = true;
             this.monTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.monTXT.Location = new System.Drawing.Point(322, 95);
+            this.monTXT.Location = new System.Drawing.Point(418, 99);
             this.monTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.monTXT.Name = "monTXT";
             this.monTXT.Size = new System.Drawing.Size(36, 37);
@@ -245,7 +433,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             // 
             this.levTXT.AutoSize = true;
             this.levTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.levTXT.Location = new System.Drawing.Point(130, 95);
+            this.levTXT.Location = new System.Drawing.Point(226, 99);
             this.levTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.levTXT.Name = "levTXT";
             this.levTXT.Size = new System.Drawing.Size(36, 37);
@@ -256,7 +444,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             // 
             this.levConstTXT.AutoSize = true;
             this.levConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.levConstTXT.Location = new System.Drawing.Point(72, 70);
+            this.levConstTXT.Location = new System.Drawing.Point(168, 74);
             this.levConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.levConstTXT.Name = "levConstTXT";
             this.levConstTXT.Size = new System.Drawing.Size(152, 25);
@@ -267,7 +455,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             // 
             this.moneyConstTXT.AutoSize = true;
             this.moneyConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moneyConstTXT.Location = new System.Drawing.Point(256, 70);
+            this.moneyConstTXT.Location = new System.Drawing.Point(352, 74);
             this.moneyConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moneyConstTXT.Name = "moneyConstTXT";
             this.moneyConstTXT.Size = new System.Drawing.Size(168, 25);
@@ -395,6 +583,18 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTab.TabIndex = 3;
             this.fightTab.Text = "fightTab";
             this.fightTab.Enter += new System.EventHandler(this.fightTab_Enter);
+            // 
+            // fightLeaveButt
+            // 
+            this.fightLeaveButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Exit;
+            this.fightLeaveButt.Location = new System.Drawing.Point(476, 874);
+            this.fightLeaveButt.Name = "fightLeaveButt";
+            this.fightLeaveButt.Size = new System.Drawing.Size(241, 67);
+            this.fightLeaveButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fightLeaveButt.TabIndex = 27;
+            this.fightLeaveButt.TabStop = false;
+            this.fightLeaveButt.Visible = false;
+            this.fightLeaveButt.Click += new System.EventHandler(this.fightLeaveButt_Click);
             // 
             // YDamageTXT
             // 
@@ -796,17 +996,15 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.sideStripMenu.TabIndex = 2;
             this.sideStripMenu.Visible = false;
             // 
-            // fightLeaveButt
+            // craftIng4Txt
             // 
-            this.fightLeaveButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Exit;
-            this.fightLeaveButt.Location = new System.Drawing.Point(476, 874);
-            this.fightLeaveButt.Name = "fightLeaveButt";
-            this.fightLeaveButt.Size = new System.Drawing.Size(241, 67);
-            this.fightLeaveButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fightLeaveButt.TabIndex = 27;
-            this.fightLeaveButt.TabStop = false;
-            this.fightLeaveButt.Visible = false;
-            this.fightLeaveButt.Click += new System.EventHandler(this.fightLeaveButt_Click);
+            this.craftIng4Txt.AutoSize = true;
+            this.craftIng4Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftIng4Txt.Location = new System.Drawing.Point(12, 107);
+            this.craftIng4Txt.Name = "craftIng4Txt";
+            this.craftIng4Txt.Size = new System.Drawing.Size(53, 25);
+            this.craftIng4Txt.TabIndex = 4;
+            this.craftIng4Txt.Text = "ing1";
             // 
             // Gierka
             // 
@@ -830,13 +1028,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             ((System.ComponentModel.ISupportInitialize)(this.startButt)).EndInit();
             this.planszaTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).EndInit();
-            this.cityInfo.ResumeLayout(false);
-            this.cityInfo.PerformLayout();
+            this.cityInfoTab.ResumeLayout(false);
+            this.cityInfoTab.PerformLayout();
+            this.craftIngrPanel.ResumeLayout(false);
+            this.craftIngrPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backButt1)).EndInit();
             this.backpackTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backButt2)).EndInit();
             this.fightTab.ResumeLayout(false);
             this.fightTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).EndInit();
             this.EnemyNameTxtPanel.ResumeLayout(false);
             this.exerciseTxtPanel.ResumeLayout(false);
             this.fightInfoTxtPanel.ResumeLayout(false);
@@ -848,7 +1049,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).EndInit();
             this.sideStripMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -857,7 +1057,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private System.Windows.Forms.TabControl mainScreen;
         private System.Windows.Forms.TabPage planszaTab;
-        private System.Windows.Forms.TabPage cityInfo;
+        private System.Windows.Forms.TabPage cityInfoTab;
         private System.Windows.Forms.PictureBox gearIcon;
         private System.Windows.Forms.PictureBox backButt1;
         private System.Windows.Forms.Label moneyConstTXT;
@@ -917,6 +1117,23 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.PictureBox exitButt;
         private System.Windows.Forms.PictureBox optionsButt;
         private System.Windows.Forms.PictureBox fightLeaveButt;
+        private System.Windows.Forms.Label craftingCityConstTxt;
+        private System.Windows.Forms.ListView craftingCityList;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Label TradeConstTxt;
+        private System.Windows.Forms.ListView cityTradeList;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Panel craftIngrPanel;
+        private System.Windows.Forms.Label craftIng3Txt;
+        private System.Windows.Forms.Label craftIng2Txt;
+        private System.Windows.Forms.Label craftIng1Txt;
+        private System.Windows.Forms.Label craftConstTxt;
+        private System.Windows.Forms.Button craftButt;
+        private System.Windows.Forms.Label craftIng4Txt;
     }
 }
 

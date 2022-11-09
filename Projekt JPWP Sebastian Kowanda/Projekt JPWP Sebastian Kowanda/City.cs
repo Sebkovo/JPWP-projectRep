@@ -41,7 +41,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             Random r = new Random();
             int top = r.Next(0, 994);
             int left = r.Next(0, 1171);
-            level = r.Next(0, 20);
+            level = r.Next(1, 20);
             money = r.Next(0, 3000);
             this.Location = new Point(left, top);
             this.Width = 2* square_size;
