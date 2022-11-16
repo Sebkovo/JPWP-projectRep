@@ -28,6 +28,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public Image EnemyImageVar;
         private bool isCalc = false;
         private int answer;
+        private string[] craftings = {"Wooden Sword","Steel Sword","Wooden Armor","Steel Armor","Slime Sword","Slime Armor","Happy Potion","Angry Potion","Weird Potion","Dragon Blood Potion","Dragon Sword","Dragon Armor"};
+
         public WaveOut audOut1 = new WaveOut();
         public WaveOut audOut2= new WaveOut();
         private WaveStream stream1 = new Mp3FileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
@@ -68,64 +70,17 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             
             audOut1.Play();
             dayNightTimer.Start();
-            //działa, do usunięcia w swoim czasie
-            item itw = new item("sword", "23");
-            string[] ok = {"" ,itw.name, itw.value };
-            var toList = new ListViewItem(ok);
-            itemsList.Items.Add(toList);
-             itw = new item("Wood", "5");
-            string[] ok2 = { "", itw.name, itw.value,"10" };
-             toList = new ListViewItem(ok2);
-            itemsList.Items.Add(toList);
-             itw = new item("Steel", "dziala");
-            string[] ok3 = { "", itw.name, itw.value, "20"};
-             toList = new ListViewItem(ok3);
-            itemsList.Items.Add(toList);
-             itw = new item("nice", "dziala");
-            string[] ok4 = { "", itw.name, itw.value };
-             toList = new ListViewItem(ok4);
-            itemsList.Items.Add(toList);
-
-            ok2[0] = "";
-            ok2[1] = "Wooden Sword";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Steel Sword";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Wooden Armor";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Steel Armor";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Potion1";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Potion2";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Potion3";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
-            ok2[0] = "";
-            ok2[1] = "Potion4";
-            ok2[2] = "";
-            toList = new ListViewItem(ok2);
-            craftingCityList.Items.Add(toList);
+            string[] itemToAdd = { "", "", "" };
+            ListViewItem toList;
+            foreach (string temp in craftings)
+            {
+                itemToAdd[0] = "";
+                itemToAdd[1] = temp;
+                itemToAdd[2] = "";
+                toList = new ListViewItem(itemToAdd);
+                craftingCityList.Items.Add(toList);
+            }
+            
             /*foreach (ListViewItem temp in itemsList.Items)
             {
                 MessageBox.Show(temp.SubItems[1].Text);
@@ -146,6 +101,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             bool enough1 = false;
             bool enough2 = false;
             bool enough3 = false;
+            craftIng1Txt.Text = "";
+            craftIng2Txt.Text = "";
+            craftIng3Txt.Text = "";
             int allfound = 0;
             switch (Item)
             {
@@ -201,8 +159,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftIng3Txt.ForeColor = Color.Red;
                     }
-                    craftIng3Txt.Text = "-City level 10";
-                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 10))
+                    craftIng3Txt.Text = "-City level 2";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 2))
                     {
                         craftButt.Visible = true;
                     }
@@ -212,15 +170,693 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     }
                     break;
                 case "Steel Sword":
-
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        if(temp.SubItems[1].Text == "Steel")
+                        {
+                           if (Int16.Parse(temp.SubItems[3].Text) >= 8)
+                           {
+                              enough1 = true;
+                           }
+                          allfound++;
+                        }
+                        if (allfound == 1)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Steel 8";
+                    if (Int16.Parse(levTXT.Text) >= 5)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-City level 5";
+                    if (enough1 && (Int16.Parse(levTXT.Text) >= 5))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
                     break;
                 case "Wooden Armor":
-
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        if (temp.SubItems[1].Text == "Wood")
+                        {
+                            if (Int16.Parse(temp.SubItems[3].Text) >= 15)
+                            {
+                                enough1 = true;
+                            }
+                            allfound++;
+                        }
+                        if (allfound == 1)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Wood 15";
+                    if (Int16.Parse(levTXT.Text) >= 2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-City level 2";
+                    if (enough1 && (Int16.Parse(levTXT.Text) >= 2))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
                     break;
                 case "Steel Armor":
-
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        if (temp.SubItems[1].Text == "Steel")
+                        {
+                            if (Int16.Parse(temp.SubItems[3].Text) >= 12)
+                            {
+                                enough1 = true;
+                            }
+                            allfound++;
+                        }
+                        if (allfound == 1)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Steel 12";
+                    if (Int16.Parse(levTXT.Text) >= 5)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-City level 5";
+                    if (enough1 && (Int16.Parse(levTXT.Text) >= 5))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
                     break;
-
+                case "Slime Sword":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Slime essence":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Wood":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 2)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Steel":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 2)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 3)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Slime essence 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Wood 2";
+                    if (enough3)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-Steel 2";
+                    if (Int16.Parse(levTXT.Text) >= 6)
+                    {
+                        craftIng4Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng4Txt.ForeColor = Color.Red;
+                    }
+                    craftIng4Txt.Text = "-City level 6";
+                    if (enough1 && enough2 && enough3 && (Int16.Parse(levTXT.Text) >= 6))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Slime Armor":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Slime essence":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Steel":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 5)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Slime essence 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Steel 5";
+                    if (Int16.Parse(levTXT.Text) >= 6)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 6";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 6))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Glass Bottle":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        if (temp.SubItems[1].Text == "Sand")
+                        {
+                            if (Int16.Parse(temp.SubItems[3].Text) >= 5)
+                            {
+                                enough1 = true;
+                            }
+                            allfound++;
+                        }
+                        if (allfound == 1)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Sand 5";
+                    if (Int16.Parse(levTXT.Text) >= 5)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-City level 5";
+                    if (enough1 && (Int16.Parse(levTXT.Text) >= 5))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Happy Potion":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Happy essence":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 5)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Glass bottle":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 1)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Happy essence 5";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Glass bottle 1";
+                    if (Int16.Parse(levTXT.Text) >= 6)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 6";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 6))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Angry Potion":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Angry essence":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 5)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Glass bottle":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 1)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Angry essence 5";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Glass bottle 1";
+                    if (Int16.Parse(levTXT.Text) >= 6)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 6";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 6))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Weird Potion":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Weird essence":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 5)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Glass bottle":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 1)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Weird essence 5";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Glass bottle 1";
+                    if (Int16.Parse(levTXT.Text) >= 6)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 6";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 6))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Dragon Blood Potion":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Dragon blood":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Glass bottle":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 1)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Dragon Blood 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Glass bottle 1";
+                    if (Int16.Parse(levTXT.Text) >= 12)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 12";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 12))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Dragon Sword":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Dragon scale":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Steel":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Dragon scale 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Steel 10";
+                    if (Int16.Parse(levTXT.Text) >= 15)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 15";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 15))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
+                case "Dragon Armor":
+                    craftConstTxt.Visible = true;
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        switch (temp.SubItems[1].Text)
+                        {
+                            case "Dragon scale":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 10)
+                                {
+                                    enough1 = true;
+                                }
+                                allfound++;
+                                break;
+                            case "Steel":
+                                if (Int16.Parse(temp.SubItems[3].Text) >= 20)
+                                {
+                                    enough2 = true;
+                                }
+                                allfound++;
+                                break;
+                        }
+                        if (allfound == 2)
+                        {
+                            break;
+                        }
+                    }
+                    if (enough1)
+                    {
+                        craftIng1Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng1Txt.ForeColor = Color.Red;
+                    }
+                    craftIng1Txt.Text = "-Dragon scale 10";
+                    if (enough2)
+                    {
+                        craftIng2Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng2Txt.ForeColor = Color.Red;
+                    }
+                    craftIng2Txt.Text = "-Steel 20";
+                    if (Int16.Parse(levTXT.Text) >= 15)
+                    {
+                        craftIng3Txt.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        craftIng3Txt.ForeColor = Color.Red;
+                    }
+                    craftIng3Txt.Text = "-City level 15";
+                    if (enough1 && enough2 && (Int16.Parse(levTXT.Text) >= 15))
+                    {
+                        craftButt.Visible = true;
+                    }
+                    else
+                    {
+                        craftButt.Visible = false;
+                    }
+                    break;
             }
         }
 

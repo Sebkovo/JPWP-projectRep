@@ -41,6 +41,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.cityInfoTab = new System.Windows.Forms.TabPage();
             this.craftButt = new System.Windows.Forms.Button();
             this.craftIngrPanel = new System.Windows.Forms.Panel();
+            this.craftIng4Txt = new System.Windows.Forms.Label();
             this.craftIng3Txt = new System.Windows.Forms.Label();
             this.craftIng2Txt = new System.Windows.Forms.Label();
             this.craftIng1Txt = new System.Windows.Forms.Label();
@@ -108,7 +109,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
             this.menuPullButt = new System.Windows.Forms.Panel();
             this.sideStripMenu = new System.Windows.Forms.Panel();
-            this.craftIng4Txt = new System.Windows.Forms.Label();
             this.mainScreen.SuspendLayout();
             this.menuTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitButt)).BeginInit();
@@ -275,6 +275,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.craftIngrPanel.Name = "craftIngrPanel";
             this.craftIngrPanel.Size = new System.Drawing.Size(210, 203);
             this.craftIngrPanel.TabIndex = 9;
+            // 
+            // craftIng4Txt
+            // 
+            this.craftIng4Txt.AutoSize = true;
+            this.craftIng4Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.craftIng4Txt.Location = new System.Drawing.Point(12, 107);
+            this.craftIng4Txt.Name = "craftIng4Txt";
+            this.craftIng4Txt.Size = new System.Drawing.Size(53, 25);
+            this.craftIng4Txt.TabIndex = 4;
+            this.craftIng4Txt.Text = "ing1";
             // 
             // craftIng3Txt
             // 
@@ -444,23 +454,23 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             // 
             this.levConstTXT.AutoSize = true;
             this.levConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.levConstTXT.Location = new System.Drawing.Point(168, 74);
+            this.levConstTXT.Location = new System.Drawing.Point(194, 74);
             this.levConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.levConstTXT.Name = "levConstTXT";
-            this.levConstTXT.Size = new System.Drawing.Size(152, 25);
+            this.levConstTXT.Size = new System.Drawing.Size(100, 25);
             this.levConstTXT.TabIndex = 2;
-            this.levConstTXT.Text = "Poziom miasta";
+            this.levConstTXT.Text = "City level";
             // 
             // moneyConstTXT
             // 
             this.moneyConstTXT.AutoSize = true;
             this.moneyConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moneyConstTXT.Location = new System.Drawing.Point(352, 74);
+            this.moneyConstTXT.Location = new System.Drawing.Point(371, 74);
             this.moneyConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moneyConstTXT.Name = "moneyConstTXT";
-            this.moneyConstTXT.Size = new System.Drawing.Size(168, 25);
+            this.moneyConstTXT.Size = new System.Drawing.Size(119, 25);
             this.moneyConstTXT.TabIndex = 0;
-            this.moneyConstTXT.Text = "Dostępne środki";
+            this.moneyConstTXT.Text = "City money";
             // 
             // backButt1
             // 
@@ -995,16 +1005,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.sideStripMenu.Size = new System.Drawing.Size(132, 986);
             this.sideStripMenu.TabIndex = 2;
             this.sideStripMenu.Visible = false;
-            // 
-            // craftIng4Txt
-            // 
-            this.craftIng4Txt.AutoSize = true;
-            this.craftIng4Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.craftIng4Txt.Location = new System.Drawing.Point(12, 107);
-            this.craftIng4Txt.Name = "craftIng4Txt";
-            this.craftIng4Txt.Size = new System.Drawing.Size(53, 25);
-            this.craftIng4Txt.TabIndex = 4;
-            this.craftIng4Txt.Text = "ing1";
             // 
             // Gierka
             // 
