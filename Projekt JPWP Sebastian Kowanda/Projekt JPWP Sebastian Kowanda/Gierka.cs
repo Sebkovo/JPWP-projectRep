@@ -29,7 +29,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private bool isCalc = false;
         private int answer;
         private string[] craftings = {"Wooden Sword","Steel Sword","Wooden Armor","Steel Armor","Slime Sword","Slime Armor","Happy Potion","Angry Potion","Weird Potion","Dragon Blood Potion","Dragon Sword","Dragon Armor"};
-
+        private string[] requirements = { "","","","","",""};
         public WaveOut audOut1 = new WaveOut();
         public WaveOut audOut2= new WaveOut();
         private WaveStream stream1 = new Mp3FileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
@@ -70,7 +70,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             
             audOut1.Play();
             dayNightTimer.Start();
-            string[] itemToAdd = { "", "", "" };
+            string[] itemToAdd = { "", "", "",""};
             ListViewItem toList;
             foreach (string temp in craftings)
             {
@@ -80,7 +80,20 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 toList = new ListViewItem(itemToAdd);
                 craftingCityList.Items.Add(toList);
             }
-            
+
+            itemToAdd[0] = "";
+            itemToAdd[1] = "Wood";
+            itemToAdd[2] = "";
+            itemToAdd[3] = "20";
+            toList = new ListViewItem(itemToAdd);
+            itemsList.Items.Add(toList);
+            itemToAdd[0] = "";
+            itemToAdd[1] = "Steel";
+            itemToAdd[2] = "";
+            itemToAdd[3] = "20";
+            toList = new ListViewItem(itemToAdd);
+            itemsList.Items.Add(toList);
+
             /*foreach (ListViewItem temp in itemsList.Items)
             {
                 MessageBox.Show(temp.SubItems[1].Text);
@@ -104,6 +117,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             craftIng1Txt.Text = "";
             craftIng2Txt.Text = "";
             craftIng3Txt.Text = "";
+            for (int i = 0; i < 6; i++)
+            {
+                requirements[i] = "";
+            }
             int allfound = 0;
             switch (Item)
             {
@@ -168,6 +185,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Wood";
+                    requirements[1] = "10";
+                    requirements[2] = "Steel";
+                    requirements[3] = "2";
                     break;
                 case "Steel Sword":
                     craftConstTxt.Visible = true;
@@ -212,6 +233,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Steel";
+                    requirements[1] = "8";
                     break;
                 case "Wooden Armor":
                     craftConstTxt.Visible = true;
@@ -256,6 +279,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Wood";
+                    requirements[1] = "15";
                     break;
                 case "Steel Armor":
                     craftConstTxt.Visible = true;
@@ -300,6 +325,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Steel";
+                    requirements[1] = "12";
                     break;
                 case "Slime Sword":
                     craftConstTxt.Visible = true;
@@ -378,6 +405,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Slime essence";
+                    requirements[1] = "10";
+                    requirements[2] = "Wood";
+                    requirements[3] = "2";
+                    requirements[4] = "Steel";
+                    requirements[5] = "2";
                     break;
                 case "Slime Armor":
                     craftConstTxt.Visible = true;
@@ -440,6 +473,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Slime essence";
+                    requirements[1] = "10";
+                    requirements[2] = "Steel";
+                    requirements[3] = "5";
                     break;
                 case "Glass Bottle":
                     craftConstTxt.Visible = true;
@@ -484,6 +521,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Sand";
+                    requirements[1] = "5";
                     break;
                 case "Happy Potion":
                     craftConstTxt.Visible = true;
@@ -546,6 +585,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Happy essence";
+                    requirements[1] = "5";
+                    requirements[2] = "Glass bottle";
+                    requirements[3] = "1";
                     break;
                 case "Angry Potion":
                     craftConstTxt.Visible = true;
@@ -608,6 +651,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Angry essence";
+                    requirements[1] = "5";
+                    requirements[2] = "Glass bottle";
+                    requirements[3] = "1";
                     break;
                 case "Weird Potion":
                     craftConstTxt.Visible = true;
@@ -670,6 +717,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Weird essence";
+                    requirements[1] = "5";
+                    requirements[2] = "Glass bottle";
+                    requirements[3] = "1";
                     break;
                 case "Dragon Blood Potion":
                     craftConstTxt.Visible = true;
@@ -732,6 +783,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Dragon Blood";
+                    requirements[1] = "10";
+                    requirements[2] = "Glass bottle";
+                    requirements[3] = "1";
                     break;
                 case "Dragon Sword":
                     craftConstTxt.Visible = true;
@@ -794,6 +849,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Dragon scale";
+                    requirements[1] = "10";
+                    requirements[2] = "Steel";
+                    requirements[3] = "10";
                     break;
                 case "Dragon Armor":
                     craftConstTxt.Visible = true;
@@ -856,6 +915,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
+                    requirements[0] = "Dragon scale";
+                    requirements[1] = "10";
+                    requirements[2] = "Steel";
+                    requirements[3] = "20";
                     break;
             }
         }
@@ -1659,6 +1722,52 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 craftIng4Txt.Text = "";
                 craftConstTxt.Visible = false;
             }
+        }
+
+        private void craftButt_Click(object sender, EventArgs e)
+        {
+            for(int n = 0; n < 6; n += 2)
+            {
+                if (requirements[n] != "")
+                {
+                    foreach (ListViewItem temp in itemsList.Items)
+                    {
+                        if (requirements[n] == temp.SubItems[1].Text)
+                        {
+                            if (Int32.Parse(temp.SubItems[3].Text) - Int32.Parse(requirements[n + 1]) <= 0)
+                            {
+                                temp.Remove();
+                                break;
+                            }
+                            else
+                            {
+                                temp.SubItems[3].Text = (Int32.Parse(temp.SubItems[3].Text) - Int32.Parse(requirements[n + 1])).ToString();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            bool isThere = false;
+            foreach (ListViewItem temp in itemsList.Items)
+            {
+                if(temp.SubItems[1].Text == craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text)
+                {
+                    isThere = true;
+                    craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[3].Text = (Int32.Parse(craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[3].Text) + 1).ToString();
+                    break;
+                }
+            }
+            if (!isThere)
+            {
+                string[] itemToAdd = { "", "", "",""};
+                itemToAdd[0] = "";
+                itemToAdd[1] = craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text;
+                itemToAdd[2] = "";
+                var toList = new ListViewItem(itemToAdd);
+                itemsList.Items.Add(toList);
+            }
+            
         }
     }
 }

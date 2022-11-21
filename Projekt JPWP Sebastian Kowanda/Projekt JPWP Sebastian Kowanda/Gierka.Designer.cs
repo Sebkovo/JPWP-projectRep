@@ -263,6 +263,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.craftButt.TabIndex = 10;
             this.craftButt.Text = "Craft";
             this.craftButt.UseVisualStyleBackColor = true;
+            this.craftButt.Click += new System.EventHandler(this.craftButt_Click);
             // 
             // craftIngrPanel
             // 
