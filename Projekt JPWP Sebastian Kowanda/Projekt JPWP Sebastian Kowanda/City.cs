@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
-    class City : PictureBox
+    public class City : PictureBox
     {
         private TabControl parente;
         private Label monLab;
@@ -22,6 +22,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);    //Without this line, the event won't be fired
+            parentRef.activeCity = this;
             if(parente!= null)
             {
                 parente.SelectTab(2);

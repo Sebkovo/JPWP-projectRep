@@ -18,6 +18,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
     {
         private int widthToIgnore = 80;
         private int square_size = 30;
+        private int playerMoney = 0;
         private long ticks = 0;     // fight timer
         private long ticks2 = 0;    // animation timer
         private long ticks3 = 0;    // dayNight timer
@@ -28,7 +29,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public Image EnemyImageVar;
         private bool isCalc = false;
         private int answer;
-        private string[] craftings = {"Wooden Sword","Steel Sword","Wooden Armor","Steel Armor","Slime Sword","Slime Armor","Happy Potion","Angry Potion","Weird Potion","Dragon Blood Potion","Dragon Sword","Dragon Armor"};
+        public City activeCity;
+        private string[] craftings = {"Wooden sword","Steel sword","Wooden armor","Steel armor","Slime sword","Slime armor","Happy potion","Angry potion","Weird potion","Dragon blood potion","Dragon sword","Dragon armor"};
+        private string[] prices = { "100", "240", "150", "360", "230", "300", "125", "125", "125", "525", "900", "1200" };
         private string[] requirements = { "","","","","",""};
         public WaveOut audOut1 = new WaveOut();
         public WaveOut audOut2= new WaveOut();
@@ -74,7 +77,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             ListViewItem toList;
             foreach (string temp in craftings)
             {
-                itemToAdd[0] = "";
+                itemToAdd[0] = prices[craftings.ToList().IndexOf(temp)];
                 itemToAdd[1] = temp;
                 itemToAdd[2] = "";
                 toList = new ListViewItem(itemToAdd);
@@ -83,13 +86,13 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
             itemToAdd[0] = "";
             itemToAdd[1] = "Wood";
-            itemToAdd[2] = "";
+            itemToAdd[2] = "10";
             itemToAdd[3] = "20";
             toList = new ListViewItem(itemToAdd);
             itemsList.Items.Add(toList);
             itemToAdd[0] = "";
             itemToAdd[1] = "Steel";
-            itemToAdd[2] = "";
+            itemToAdd[2] = "30";
             itemToAdd[3] = "20";
             toList = new ListViewItem(itemToAdd);
             itemsList.Items.Add(toList);
@@ -109,6 +112,22 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
 
         }
+
+        private void updateSellList()
+        {
+            string[] itemToAdd = { "", "", "", "" };
+            ListViewItem toList;
+            citySellList.Items.Clear();
+            foreach (ListViewItem temp in itemsList.Items)
+            {
+                itemToAdd[1] = temp.SubItems[1].Text;
+                itemToAdd[2] = temp.SubItems[2].Text;
+                itemToAdd[3] = temp.SubItems[3].Text;
+                toList = new ListViewItem(itemToAdd);
+                citySellList.Items.Add(toList);
+            }
+        }
+
         private void setCraftingRequirements(string Item)
         {
             bool enough1 = false;
@@ -124,7 +143,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             int allfound = 0;
             switch (Item)
             {
-                case "Wooden Sword":
+                case "Wooden sword":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -190,7 +209,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Steel";
                     requirements[3] = "2";
                     break;
-                case "Steel Sword":
+                case "Steel sword":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -236,7 +255,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[0] = "Steel";
                     requirements[1] = "8";
                     break;
-                case "Wooden Armor":
+                case "Wooden armor":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -282,7 +301,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[0] = "Wood";
                     requirements[1] = "15";
                     break;
-                case "Steel Armor":
+                case "Steel armor":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -328,7 +347,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[0] = "Steel";
                     requirements[1] = "12";
                     break;
-                case "Slime Sword":
+                case "Slime sword":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -412,7 +431,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[4] = "Steel";
                     requirements[5] = "2";
                     break;
-                case "Slime Armor":
+                case "Slime armor":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -478,7 +497,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Steel";
                     requirements[3] = "5";
                     break;
-                case "Glass Bottle":
+                case "Glass bottle":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -524,7 +543,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[0] = "Sand";
                     requirements[1] = "5";
                     break;
-                case "Happy Potion":
+                case "Happy potion":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -590,7 +609,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Glass bottle";
                     requirements[3] = "1";
                     break;
-                case "Angry Potion":
+                case "Angry potion":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -656,7 +675,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Glass bottle";
                     requirements[3] = "1";
                     break;
-                case "Weird Potion":
+                case "Weird potion":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -722,7 +741,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Glass bottle";
                     requirements[3] = "1";
                     break;
-                case "Dragon Blood Potion":
+                case "Dragon blood potion":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -756,7 +775,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftIng1Txt.ForeColor = Color.Red;
                     }
-                    craftIng1Txt.Text = "-Dragon Blood 10";
+                    craftIng1Txt.Text = "-Dragon blood 10";
                     if (enough2)
                     {
                         craftIng2Txt.ForeColor = Color.Black;
@@ -783,12 +802,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     {
                         craftButt.Visible = false;
                     }
-                    requirements[0] = "Dragon Blood";
+                    requirements[0] = "Dragon blood";
                     requirements[1] = "10";
                     requirements[2] = "Glass bottle";
                     requirements[3] = "1";
                     break;
-                case "Dragon Sword":
+                case "Dragon sword":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -854,7 +873,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     requirements[2] = "Steel";
                     requirements[3] = "10";
                     break;
-                case "Dragon Armor":
+                case "Dragon armor":
                     craftConstTxt.Visible = true;
                     foreach (ListViewItem temp in itemsList.Items)
                     {
@@ -1754,20 +1773,89 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 if(temp.SubItems[1].Text == craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text)
                 {
                     isThere = true;
-                    craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[3].Text = (Int32.Parse(craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[3].Text) + 1).ToString();
+                    temp.SubItems[3].Text = (Int32.Parse(temp.SubItems[3].Text) + 1).ToString();
                     break;
                 }
             }
             if (!isThere)
             {
-                string[] itemToAdd = { "", "", "",""};
+                string[] itemToAdd = { "", "", "","1"};
                 itemToAdd[0] = "";
                 itemToAdd[1] = craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text;
-                itemToAdd[2] = "";
+                itemToAdd[2] = craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[0].Text;
                 var toList = new ListViewItem(itemToAdd);
                 itemsList.Items.Add(toList);
             }
-            
+            setCraftingRequirements(craftingCityList.Items[craftingCityList.SelectedIndices[0]].SubItems[1].Text);
+            updateSellList();
+        }
+
+        private void cityBuyButt_Click(object sender, EventArgs e)
+        {
+            playerMoney -= Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text);
+            activeCity.money += Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text);
+            bool isThere = false;
+            foreach (ListViewItem temp in itemsList.Items)
+            {
+                if (temp.SubItems[1].Text == cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[1].Text)
+                {
+                    isThere = true;
+                    temp.SubItems[3].Text = (Int32.Parse(temp.SubItems[3].Text) + 1).ToString();
+                    break;
+                }
+            }
+            if (!isThere)
+            {
+                string[] itemToAdd = { "", "", "", "1" };
+                itemToAdd[0] = "";
+                itemToAdd[1] = cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[1].Text;
+                itemToAdd[2] = (Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text)/3).ToString();
+                var toList = new ListViewItem(itemToAdd);
+                itemsList.Items.Add(toList);
+            }
+            updateSellList();
+            yMonTXT.Text = playerMoney.ToString();
+            monTXT.Text = activeCity.money.ToString();
+        }
+
+        private void citySellButt_Click(object sender, EventArgs e)
+        {
+            if (citySellList.Items.Count != 0)
+            {
+                int selectedIndex;
+                foreach (ListViewItem temp in itemsList.Items)
+                {
+                    if (temp.SubItems[1].Text == citySellList.Items[citySellList.SelectedIndices[0]].SubItems[1].Text)
+                    {
+                        if ((Int32.Parse(temp.SubItems[3].Text) - 1) > 0)
+                        {
+                            temp.SubItems[3].Text = (Int32.Parse(temp.SubItems[3].Text) - 1).ToString();
+                        }
+                        else
+                        {
+                            temp.Remove();
+                        }
+
+                        break;
+                    }
+                }
+                activeCity.money -= Int32.Parse(citySellList.Items[citySellList.SelectedIndices[0]].SubItems[2].Text);
+                playerMoney += Int32.Parse(citySellList.Items[citySellList.SelectedIndices[0]].SubItems[2].Text);
+                selectedIndex = citySellList.SelectedIndices[0];
+                updateSellList();
+                if (citySellList.Items.Count != 0)
+                {
+                    citySellList.Items[selectedIndex].Selected = true;
+                }
+                yMonTXT.Text = playerMoney.ToString();
+                monTXT.Text = activeCity.money.ToString();
+            }
+        }
+
+        private void cityInfoTab_Enter(object sender, EventArgs e)
+        {
+            yMonTXT.Text = playerMoney.ToString();
+            updateSellList();
         }
     }
 }

@@ -1,0 +1,25 @@
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\Projekt JPWP Sebastian Kowanda.exe.config
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\Projekt JPWP Sebastian Kowanda.pdb
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\Microsoft.Win32.Registry.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.Asio.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.Core.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.Midi.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.Wasapi.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.WinForms.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.WinMM.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\System.Security.AccessControl.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\System.Security.Principal.Windows.dll
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\Microsoft.Win32.Registry.xml
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\NAudio.xml
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\System.Security.AccessControl.xml
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\bin\Release\System.Security.Principal.Windows.xml
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.csproj.AssemblyReference.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt_JPWP_Sebastian_Kowanda.Gierka.resources
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.resources
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.csproj.GenerateResource.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.csproj.CoreCompileInputs.cache
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.csproj.CopyComplete
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.exe
+E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\obj\Release\Projekt JPWP Sebastian Kowanda.pdb
