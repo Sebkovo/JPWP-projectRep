@@ -30,47 +30,47 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
             "Wood",
             "Wood",
             "30",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
             "Steel",
             "Steel",
             "90",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sand",
             "Sand",
             "15",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
             "Slime essence",
             "Slime essence",
             "45",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
             "Happy essence",
             "Happy essence",
             "60",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
             "Angry essence",
             "Angry essence",
             "60",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
             "Weird essence",
             "Weird essence",
             "60",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
             "Dragon blood",
             "Dragon blood",
             "150",
             "inf"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
             "Dragon scale",
             "Dragon scale",
             "180",
@@ -84,6 +84,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.planszaTab = new System.Windows.Forms.TabPage();
             this.Warrior = new System.Windows.Forms.PictureBox();
             this.cityInfoTab = new System.Windows.Forms.TabPage();
+            this.yMonTXT = new System.Windows.Forms.Label();
+            this.yMoneyCityConstTXT = new System.Windows.Forms.Label();
+            this.cityBuyButt = new System.Windows.Forms.Button();
+            this.citySellButt = new System.Windows.Forms.Button();
+            this.sellConstTxt = new System.Windows.Forms.Label();
+            this.cityBuyList = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.craftButt = new System.Windows.Forms.Button();
             this.craftIngrPanel = new System.Windows.Forms.Panel();
             this.craftIng4Txt = new System.Windows.Forms.Label();
@@ -154,16 +164,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
             this.menuPullButt = new System.Windows.Forms.Panel();
             this.sideStripMenu = new System.Windows.Forms.Panel();
-            this.cityBuyList = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sellConstTxt = new System.Windows.Forms.Label();
-            this.citySellButt = new System.Windows.Forms.Button();
-            this.cityBuyButt = new System.Windows.Forms.Button();
-            this.yMoneyCityConstTXT = new System.Windows.Forms.Label();
-            this.yMonTXT = new System.Windows.Forms.Label();
             this.mainScreen.SuspendLayout();
             this.menuTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitButt)).BeginInit();
@@ -317,6 +317,118 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.cityInfoTab.TabIndex = 1;
             this.cityInfoTab.Enter += new System.EventHandler(this.cityInfoTab_Enter);
             // 
+            // yMonTXT
+            // 
+            this.yMonTXT.AutoSize = true;
+            this.yMonTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.yMonTXT.Location = new System.Drawing.Point(894, 473);
+            this.yMonTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.yMonTXT.Name = "yMonTXT";
+            this.yMonTXT.Size = new System.Drawing.Size(36, 37);
+            this.yMonTXT.TabIndex = 16;
+            this.yMonTXT.Text = "5";
+            // 
+            // yMoneyCityConstTXT
+            // 
+            this.yMoneyCityConstTXT.AutoSize = true;
+            this.yMoneyCityConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.yMoneyCityConstTXT.Location = new System.Drawing.Point(848, 448);
+            this.yMoneyCityConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.yMoneyCityConstTXT.Name = "yMoneyCityConstTXT";
+            this.yMoneyCityConstTXT.Size = new System.Drawing.Size(128, 25);
+            this.yMoneyCityConstTXT.TabIndex = 15;
+            this.yMoneyCityConstTXT.Text = "Your money";
+            // 
+            // cityBuyButt
+            // 
+            this.cityBuyButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cityBuyButt.Location = new System.Drawing.Point(251, 879);
+            this.cityBuyButt.Name = "cityBuyButt";
+            this.cityBuyButt.Size = new System.Drawing.Size(126, 55);
+            this.cityBuyButt.TabIndex = 14;
+            this.cityBuyButt.Text = "Buy";
+            this.cityBuyButt.UseVisualStyleBackColor = true;
+            this.cityBuyButt.Click += new System.EventHandler(this.cityBuyButt_Click);
+            // 
+            // citySellButt
+            // 
+            this.citySellButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.citySellButt.Location = new System.Drawing.Point(840, 879);
+            this.citySellButt.Name = "citySellButt";
+            this.citySellButt.Size = new System.Drawing.Size(126, 55);
+            this.citySellButt.TabIndex = 13;
+            this.citySellButt.Text = "Sell";
+            this.citySellButt.UseVisualStyleBackColor = true;
+            this.citySellButt.Click += new System.EventHandler(this.citySellButt_Click);
+            // 
+            // sellConstTxt
+            // 
+            this.sellConstTxt.AutoSize = true;
+            this.sellConstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sellConstTxt.Location = new System.Drawing.Point(790, 527);
+            this.sellConstTxt.Name = "sellConstTxt";
+            this.sellConstTxt.Size = new System.Drawing.Size(227, 42);
+            this.sellConstTxt.TabIndex = 12;
+            this.sellConstTxt.Text = "Items to sell";
+            // 
+            // cityBuyList
+            // 
+            this.cityBuyList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cityBuyList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.cityBuyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cityBuyList.FullRowSelect = true;
+            this.cityBuyList.GridLines = true;
+            this.cityBuyList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.cityBuyList.HideSelection = false;
+            listViewItem30.Tag = "";
+            this.cityBuyList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem28,
+            listViewItem29,
+            listViewItem30,
+            listViewItem31,
+            listViewItem32,
+            listViewItem33,
+            listViewItem34,
+            listViewItem35,
+            listViewItem36});
+            this.cityBuyList.LabelWrap = false;
+            this.cityBuyList.Location = new System.Drawing.Point(74, 579);
+            this.cityBuyList.MultiSelect = false;
+            this.cityBuyList.Name = "cityBuyList";
+            this.cityBuyList.Size = new System.Drawing.Size(480, 294);
+            this.cityBuyList.TabIndex = 11;
+            this.cityBuyList.TabStop = false;
+            this.cityBuyList.UseCompatibleStateImageBehavior = false;
+            this.cityBuyList.View = System.Windows.Forms.View.Details;
+            this.cityBuyList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.cityBuyList_ItemSelectionChanged);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "";
+            this.columnHeader7.Width = 0;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Items";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 296;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Value";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader9.Width = 85;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Count";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10.Width = 95;
+            // 
             // craftButt
             // 
             this.craftButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -468,6 +580,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.citySellList.TabStop = false;
             this.citySellList.UseCompatibleStateImageBehavior = false;
             this.citySellList.View = System.Windows.Forms.View.Details;
+            this.citySellList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.citySellList_ItemSelectionChanged);
             // 
             // columnHeader1
             // 
@@ -1069,117 +1182,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.sideStripMenu.Size = new System.Drawing.Size(132, 986);
             this.sideStripMenu.TabIndex = 2;
             this.sideStripMenu.Visible = false;
-            // 
-            // cityBuyList
-            // 
-            this.cityBuyList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cityBuyList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.cityBuyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cityBuyList.FullRowSelect = true;
-            this.cityBuyList.GridLines = true;
-            this.cityBuyList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.cityBuyList.HideSelection = false;
-            listViewItem12.Tag = "";
-            this.cityBuyList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
-            this.cityBuyList.LabelWrap = false;
-            this.cityBuyList.Location = new System.Drawing.Point(74, 579);
-            this.cityBuyList.MultiSelect = false;
-            this.cityBuyList.Name = "cityBuyList";
-            this.cityBuyList.Size = new System.Drawing.Size(480, 294);
-            this.cityBuyList.TabIndex = 11;
-            this.cityBuyList.TabStop = false;
-            this.cityBuyList.UseCompatibleStateImageBehavior = false;
-            this.cityBuyList.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "";
-            this.columnHeader7.Width = 0;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Items";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 296;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Value";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader9.Width = 85;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Count";
-            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader10.Width = 95;
-            // 
-            // sellConstTxt
-            // 
-            this.sellConstTxt.AutoSize = true;
-            this.sellConstTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sellConstTxt.Location = new System.Drawing.Point(790, 527);
-            this.sellConstTxt.Name = "sellConstTxt";
-            this.sellConstTxt.Size = new System.Drawing.Size(227, 42);
-            this.sellConstTxt.TabIndex = 12;
-            this.sellConstTxt.Text = "Items to sell";
-            // 
-            // citySellButt
-            // 
-            this.citySellButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.citySellButt.Location = new System.Drawing.Point(840, 879);
-            this.citySellButt.Name = "citySellButt";
-            this.citySellButt.Size = new System.Drawing.Size(126, 55);
-            this.citySellButt.TabIndex = 13;
-            this.citySellButt.Text = "Sell";
-            this.citySellButt.UseVisualStyleBackColor = true;
-            this.citySellButt.Click += new System.EventHandler(this.citySellButt_Click);
-            // 
-            // cityBuyButt
-            // 
-            this.cityBuyButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cityBuyButt.Location = new System.Drawing.Point(251, 879);
-            this.cityBuyButt.Name = "cityBuyButt";
-            this.cityBuyButt.Size = new System.Drawing.Size(126, 55);
-            this.cityBuyButt.TabIndex = 14;
-            this.cityBuyButt.Text = "Buy";
-            this.cityBuyButt.UseVisualStyleBackColor = true;
-            this.cityBuyButt.Click += new System.EventHandler(this.cityBuyButt_Click);
-            // 
-            // yMoneyCityConstTXT
-            // 
-            this.yMoneyCityConstTXT.AutoSize = true;
-            this.yMoneyCityConstTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.yMoneyCityConstTXT.Location = new System.Drawing.Point(848, 448);
-            this.yMoneyCityConstTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.yMoneyCityConstTXT.Name = "yMoneyCityConstTXT";
-            this.yMoneyCityConstTXT.Size = new System.Drawing.Size(128, 25);
-            this.yMoneyCityConstTXT.TabIndex = 15;
-            this.yMoneyCityConstTXT.Text = "Your money";
-            // 
-            // yMonTXT
-            // 
-            this.yMonTXT.AutoSize = true;
-            this.yMonTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.yMonTXT.Location = new System.Drawing.Point(894, 473);
-            this.yMonTXT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.yMonTXT.Name = "yMonTXT";
-            this.yMonTXT.Size = new System.Drawing.Size(36, 37);
-            this.yMonTXT.TabIndex = 16;
-            this.yMonTXT.Text = "5";
             // 
             // Gierka
             // 

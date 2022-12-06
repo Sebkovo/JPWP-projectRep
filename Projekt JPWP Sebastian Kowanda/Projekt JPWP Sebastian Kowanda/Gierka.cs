@@ -59,6 +59,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             craftIng2Txt.Text = "";
             craftIng3Txt.Text = "";
             craftIng4Txt.Text = "";
+            cityBuyButt.Visible = false;
+            citySellButt.Visible = false;
             craftButt.Visible = false;
 
             if (stream1 != null)
@@ -1816,11 +1818,26 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             updateSellList();
             yMonTXT.Text = playerMoney.ToString();
             monTXT.Text = activeCity.money.ToString();
+            if (cityBuyList.SelectedIndices.Count != 0)
+            {
+                if (Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text) <= playerMoney)
+                {
+                    cityBuyButt.Visible = true;
+                }
+                else
+                {
+                    cityBuyButt.Visible = false;
+                }
+            }
+            else
+            {
+                cityBuyButt.Visible = false;
+            }
         }
 
         private void citySellButt_Click(object sender, EventArgs e)
         {
-            if (citySellList.Items.Count != 0)
+            if (citySellList.Items.Count != 0 && citySellList.SelectedIndices.Count!= 0)
             {
                 int selectedIndex;
                 foreach (ListViewItem temp in itemsList.Items)
@@ -1843,12 +1860,31 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 playerMoney += Int32.Parse(citySellList.Items[citySellList.SelectedIndices[0]].SubItems[2].Text);
                 selectedIndex = citySellList.SelectedIndices[0];
                 updateSellList();
-                if (citySellList.Items.Count != 0)
+                if (citySellList.Items.Count != 0 && (citySellList.Items.Count-1)>=selectedIndex)
                 {
                     citySellList.Items[selectedIndex].Selected = true;
                 }
                 yMonTXT.Text = playerMoney.ToString();
                 monTXT.Text = activeCity.money.ToString();
+                if (citySellList.Items.Count == 0)
+                {
+                    citySellButt.Visible = false;
+                }
+                if (cityBuyList.SelectedIndices.Count != 0)
+                {
+                    if (Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text) <= playerMoney)
+                    {
+                        cityBuyButt.Visible = true;
+                    }
+                    else
+                    {
+                        cityBuyButt.Visible = false;
+                    }
+                }
+                else
+                {
+                    cityBuyButt.Visible = false;
+                }
             }
         }
 
@@ -1856,6 +1892,44 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         {
             yMonTXT.Text = playerMoney.ToString();
             updateSellList();
+        }
+
+        private void cityBuyList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (cityBuyList.SelectedIndices.Count != 0)
+            {
+                if (Int32.Parse(cityBuyList.Items[cityBuyList.SelectedIndices[0]].SubItems[2].Text)<=playerMoney)
+                {
+                    cityBuyButt.Visible = true;
+                }
+                else
+                {
+                    cityBuyButt.Visible = false;
+                }
+            }
+            else
+            {
+                cityBuyButt.Visible = false;
+            }
+        }
+
+        private void citySellList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (citySellList.SelectedIndices.Count != 0)
+            {
+                if (Int32.Parse(citySellList.Items[citySellList.SelectedIndices[0]].SubItems[2].Text) <= activeCity.money)
+                {
+                    citySellButt.Visible = true;
+                }
+                else
+                {
+                    citySellButt.Visible = false;
+                }
+            }
+            else
+            {
+                citySellButt.Visible = false;
+            }
         }
     }
 }
