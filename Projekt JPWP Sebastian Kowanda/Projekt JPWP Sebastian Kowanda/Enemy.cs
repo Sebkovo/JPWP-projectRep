@@ -50,7 +50,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     parentRef.SetEnemyImage(Resources.Lesser_Dragon);
                     break;
                 case "Dragon":
-                    parentRef.SetEnemyImage(Resources.city);
+                    parentRef.SetEnemyImage(Resources.Gragon_New);
                     break;
             }
             parente.SelectTab(4);

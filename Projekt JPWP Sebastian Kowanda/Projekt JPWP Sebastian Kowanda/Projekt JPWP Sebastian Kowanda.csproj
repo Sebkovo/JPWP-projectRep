@@ -136,6 +136,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Projekt JPWP Sebastian Kowanda_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -188,7 +189,7 @@
     <None Include="Icons\Dragon_Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\Lesser_Dragon.png" />
+    <None Include="Images\Lesser_Dragon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Lesser_Dragon_Icon.png" />
@@ -225,6 +226,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Buttons\Craft.png" />
+    <Content Include="Buttons\CraftW.png" />
+    <Content Include="Buttons\Exit.png" />
+    <Content Include="Buttons\ExitW.png" />
+    <Content Include="Buttons\Load.png" />
+    <Content Include="Buttons\LoadW.png" />
+    <Content Include="Buttons\Options.png" />
+    <Content Include="Buttons\OptionsW.png" />
+    <Content Include="Buttons\Start.png" />
+    <Content Include="Buttons\StartW.png" />
+    <Content Include="Images\Gragon_New.png" />
+    <Content Include="Images\Menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
