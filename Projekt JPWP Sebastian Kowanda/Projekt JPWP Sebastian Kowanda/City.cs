@@ -25,6 +25,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             parentRef.activeCity = this;
             if(parente!= null)
             {
+                parentRef.stopdayNight();
                 parente.SelectTab(2);
                 monLab.Text = money.ToString();
                 levLab.Text = level.ToString();

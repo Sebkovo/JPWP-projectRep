@@ -10,7 +10,7 @@ using Projekt_JPWP_Sebastian_Kowanda.Properties;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
-    class Enemy : PictureBox
+    public class Enemy : PictureBox
     {
         private TabControl parente;
         private Label healthLab;
@@ -23,7 +23,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public int power;
         protected override void OnClick(EventArgs e)
         {
-            if(parentRef.audOut2.PlaybackState is NAudio.Wave.PlaybackState.Playing)
+            parentRef.stopdayNight();
+            if (parentRef.audOut2.PlaybackState is NAudio.Wave.PlaybackState.Playing)
             {
                 parentRef.audOut2.Stop();
             }
@@ -32,6 +33,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             base.OnClick(e);    //Without this line, the event won't be fired
             EHealthBar.Maximum = health;
             EHealthBar.Value = health;
+            parentRef.activeEnemy = this;
             powerLab.Text = power.ToString();
             healthLab.Text = health + "/" + health;
             nameLab.Text = name;

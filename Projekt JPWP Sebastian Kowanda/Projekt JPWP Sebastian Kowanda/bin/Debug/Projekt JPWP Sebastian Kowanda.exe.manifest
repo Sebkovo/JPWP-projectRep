@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66201560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66550744">
       <assemblyIdentity name="Projekt JPWP Sebastian Kowanda" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>37qxlTi8mjI9q49wLdSOmSSo+csUqXiRmFo1YVWvbSI=</dsig:DigestValue>
+        <dsig:DigestValue>xhMdlOyiv7Q6WtpYZoJP7339mAwm9IcxSwr4yf6FSHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -279,6 +279,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>vklM6lB+alHJj1R62y8OxKdEOIsMRJoRA5QW2VwK6Kk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Moon.png" size="35773">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1u7OwspksyTebrM7pJzI3mHULpArP1BC0WLVSfDDwo8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Sun.png" size="1243650">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nh4P/rgwJYTeV7TKdkrUcUPrlE1tw8G+5OcUWJsp9TI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Projekt JPWP Sebastian Kowanda.exe.config" size="234">

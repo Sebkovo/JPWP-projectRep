@@ -271,6 +271,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Moon {
+            get {
+                object obj = ResourceManager.GetObject("Moon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Options {
             get {
                 object obj = ResourceManager.GetObject("Options", resourceCulture);
@@ -314,6 +324,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap StartW {
             get {
                 object obj = ResourceManager.GetObject("StartW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sun {
+            get {
+                object obj = ResourceManager.GetObject("Sun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

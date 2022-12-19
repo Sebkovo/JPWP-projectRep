@@ -30,6 +30,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private bool isCalc = false;
         private int answer;
         public City activeCity;
+        public Enemy activeEnemy;
         private string[] craftings = {"Wooden sword","Steel sword","Wooden armor","Steel armor","Slime sword","Slime armor","Happy potion","Angry potion","Weird potion","Dragon blood potion","Dragon sword","Dragon armor"};
         private string[] prices = { "100", "240", "150", "360", "230", "300", "125", "125", "125", "525", "900", "1200" };
         private string[] requirements = { "","","","","",""};
@@ -46,7 +47,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.KeyPreview = true;
             InitializeComponent();
         }
-
+        public void stopdayNight()
+        {
+            dayNightTimer.Stop();
+        }
         private void backButt1_Click(object sender, EventArgs e)
         {
             mainScreen.SelectTab(activeTab);
@@ -74,7 +78,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             
             
             audOut1.Play();
-            dayNightTimer.Start();
             string[] itemToAdd = { "", "", "",""};
             ListViewItem toList;
             foreach (string temp in craftings)
@@ -969,7 +972,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Slime essence", "2");
+                            item itw = new item("Slime essence", "15");
                             string[] ok = { "", itw.name, itw.value, ran4.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -990,7 +993,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Angry essence", "5");
+                            item itw = new item("Angry essence", "20");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1014,7 +1017,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Slime essence", "2");
+                            item itw = new item("Slime essence", "15");
                             string[] ok = { "", itw.name, itw.value, ran4.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1035,7 +1038,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Happy essence", "5");
+                            item itw = new item("Happy essence", "20");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1059,7 +1062,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Slime essence", "2");
+                            item itw = new item("Slime essence", "15");
                             string[] ok = { "", itw.name, itw.value, ran4.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1080,7 +1083,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Weird essence", "5");
+                            item itw = new item("Weird essence", "20");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1104,7 +1107,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Dragon scale", "20");
+                            item itw = new item("Dragon scale", "60");
                             string[] ok = { "", itw.name, itw.value, ran6.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1125,7 +1128,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Dragon blood", "20");
+                            item itw = new item("Dragon blood", "50");
                             string[] ok = { "", itw.name, itw.value, ran6.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1149,7 +1152,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Dragon scale", "20");
+                            item itw = new item("Dragon scale", "60");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1170,7 +1173,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Dragon blood", "20");
+                            item itw = new item("Dragon blood", "50");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1193,7 +1196,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Sand", "1");
+                            item itw = new item("Sand", "5");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1213,7 +1216,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Steel", "4");
+                            item itw = new item("Steel", "30");
                             string[] ok = { "", itw.name, itw.value, ran6.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1235,7 +1238,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         }
                         if (!added)
                         {
-                            item itw = new item("Wood", "1");
+                            item itw = new item("Wood", "10");
                             string[] ok = { "", itw.name, itw.value, ran5.ToString() };
                             var toList = new ListViewItem(ok);
                             itemsList.Items.Add(toList);
@@ -1349,11 +1352,11 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     git = true;
                 }
                 if (git)
-                 {
+                {
                      if (enemy_Array.Count != 0)
                      {
                        enemy_Array.ForEach(delegate (Enemy item)
-                        {
+                       {
                             if (item != null)
                             {
                                 if (item.Location.X <= noweM.Location.X - widthToIgnore || item.Location.X >= noweM.Location.X + widthToIgnore || item.Location.Y <= noweM.Location.Y - widthToIgnore || item.Location.Y >= noweM.Location.Y + widthToIgnore)
@@ -1378,14 +1381,14 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                      {
                         git = true;
                      }
-                 }
+                }
                 if (git)
                 {
                     //plansza.Controls.Remove();
                     planszaTab.Controls.Add(noweM);
                     cities_Array.Add(noweM);
                 }
-            }
+                }
             }
             else if (e.KeyCode == Keys.G)
             {
@@ -1463,11 +1466,13 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void gearIcon_Click(object sender, EventArgs e)
         {
+            dayNightTimer.Stop();
             mainScreen.SelectTab(5);
         }
 
         private void backpackIcon_Click(object sender, EventArgs e)
         {
+            dayNightTimer.Stop();
             mainScreen.SelectTab(3);
         }
 
@@ -1577,7 +1582,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 {
 
                     fightInfoTXT.Text = "Dobrze!"+' '+ Math.Floor((double)ticks / 10).ToString() + ':' + (ticks - (Math.Floor((double)ticks / 10)) * 10).ToString()+'s';
-                    if ((EHealthBar.Value - (int)Math.Round((20 - 2 * (double)ticks / 10)))>0)
+                    if ((EHealthBar.Value - 2000)>0) //(int)Math.Round((20 - 2 * (double)ticks / 10)))>0)
                     {
                         EHealthBar.Value -= (int)Math.Round((20 - 2 * (double)ticks / 10));
                         EHealthTXT.Text = EHealthBar.Value.ToString() + '/' + EHealthBar.Maximum.ToString();
@@ -1589,6 +1594,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         getLoot(ENameTXT.Text);
                         fightLeaveButt.Visible = true;
                         //case of winning
+
+                        planszaTab.Controls.Remove(activeEnemy);
+                        activeEnemy.Dispose();
                     }
                     
                     EDamageTXT.Text = '-' + Math.Round((20 - 2 * (double)ticks / 10)).ToString();
@@ -1640,11 +1648,18 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void dayNightTimer_Tick(object sender, EventArgs e)
         {
             ticks3++;
+            dayNightBar.Value = (int)ticks3;
             if (ticks3 >= 300 && isDay)
             {
+                // its starts getting dark
                 planszaTab.BackColor = Color.FromArgb(planszaTab.BackColor.A,planszaTab.BackColor.R-1, planszaTab.BackColor.G - 1, planszaTab.BackColor.B - 1);
+                sideStripMenu.BackColor = Color.FromArgb(planszaTab.BackColor.A, planszaTab.BackColor.R - 1, planszaTab.BackColor.G - 1, planszaTab.BackColor.B - 1);
                 if (planszaTab.BackColor.R <= 140)
                 {
+                    // the night started
+                    dayNightBar.Value = 0;
+                    moonSunPic.Image = Resources.Moon;
+                    dayNightBar.ForeColor = Color.Blue;
                     isDay = false;
                     ticks3 = 0;
                 }
@@ -1652,8 +1667,13 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             else if (ticks3 >= 300 && !isDay)
             {
                 planszaTab.BackColor = Color.FromArgb(planszaTab.BackColor.A, planszaTab.BackColor.R + 1, planszaTab.BackColor.G + 1, planszaTab.BackColor.B + 1);
+                sideStripMenu.BackColor = Color.FromArgb(planszaTab.BackColor.A, planszaTab.BackColor.R + 1, planszaTab.BackColor.G + 1, planszaTab.BackColor.B + 1);
                 if (planszaTab.BackColor.R >= 240)
                 {
+                    // the day started
+                    dayNightBar.Value = 0;
+                    moonSunPic.Image = Resources.Sun;
+                    dayNightBar.ForeColor = Color.Yellow;
                     isDay = true;
                     ticks3 = 0;
                 }
@@ -1693,6 +1713,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void optionsButt_Click(object sender, EventArgs e)
         {
             mainScreen.SelectTab(5);
+            dayNightTimer.Stop();
         }
 
         private void exitButt_Click(object sender, EventArgs e)
@@ -1707,7 +1728,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             fightLeaveButt.Visible = false;
             AttackButt.Visible = true;
             fleeButt.Visible = true;
-
         }
 
         private void craftingCityList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -1930,6 +1950,11 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             {
                 citySellButt.Visible = false;
             }
+        }
+
+        private void planszaTab_Enter(object sender, EventArgs e)
+        {
+            dayNightTimer.Start();
         }
     }
 }

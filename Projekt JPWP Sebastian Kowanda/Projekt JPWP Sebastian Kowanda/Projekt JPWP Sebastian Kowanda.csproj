@@ -240,6 +240,8 @@
     <Content Include="Buttons\StartW.png" />
     <Content Include="Images\Gragon_New.png" />
     <Content Include="Images\Menu.png" />
+    <Content Include="Images\Moon.png" />
+    <Content Include="Images\Sun.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
