@@ -121,6 +121,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Character {
+            get {
+                object obj = ResourceManager.GetObject("Character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap city {
             get {
                 object obj = ResourceManager.GetObject("city", resourceCulture);

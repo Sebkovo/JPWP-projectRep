@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66550744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66719704">
       <assemblyIdentity name="Projekt JPWP Sebastian Kowanda" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xhMdlOyiv7Q6WtpYZoJP7339mAwm9IcxSwr4yf6FSHQ=</dsig:DigestValue>
+        <dsig:DigestValue>JbYur41vyAVJjLfBoI5s9WQKdbIdl03rd0KVBpfES2o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -261,6 +261,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>P9pylXjtAFFt7MCGBKWiSICenCvfAz9XM8ytZFxzjcc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Character.png" size="78374">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dGGUNcv4i7ztgQbg3jmT5vXG+1WfQFh6vUqyYV2QAYg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Images\Gragon_New.png" size="1444661">

@@ -21,6 +21,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         public string name;
         public int health;
         public int power;
+        Random r;
         protected override void OnClick(EventArgs e)
         {
             parentRef.stopdayNight();
@@ -59,7 +60,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             parentRef.activeTab = 4;
 
         }
-        public void writeParam(TabControl parent1, Label healtLab1, Label powerLab1, Label nameLab1,ProgressBar EHealthBar1, Gierka parent)
+        public void writeParam(TabControl parent1, Label healtLab1, Label powerLab1, Label nameLab1,ProgressBar EHealthBar1, Gierka parent,Random r1, int x1,int x2,int y1,int y2)
         {
             parente = parent1;
             healthLab = healtLab1;
@@ -67,15 +68,10 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             nameLab = nameLab1;
             EHealthBar = EHealthBar1;
             parentRef = parent;
-        }
-        public Enemy()
-        {
-            Random r = new Random();
-            int top = r.Next(0, 994);
-            int left = r.Next(0, 1171);
+            r = r1;
+            int top = r.Next(x1, x2);
+            int left = r.Next(y1, y2);
             this.Location = new Point(left, top);
-            this.Width = 80;
-            this.Height = 80;
             int sw = r.Next(0, 800); // should be 0,1000
             switch (sw)
             {
@@ -96,7 +92,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     }
                     health = r.Next(70, 120);
                     power = r.Next(2, 5);
-
                     break;
                 case int n when (n < 700 && n >= 500): // 20%
                     this.Image = Resources.Lesser_Dragon_Icon;
@@ -125,7 +120,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 default:
                     break;
             }
-
+        }
+        public Enemy()
+        {
+            
+            this.Width = 80;
+            this.Height = 80;
             this.BackColor = Color.Transparent;
             this.SizeMode = PictureBoxSizeMode.Zoom;
         }

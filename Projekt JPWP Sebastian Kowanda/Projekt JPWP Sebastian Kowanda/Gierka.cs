@@ -25,6 +25,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private bool isDay = true;
         private int playerHealth = 100;
         private int playerPower = 1;
+        private int playerArmor = 0;
+        private int playerSword = 0;
         public int activeTab = 0;
         public Image EnemyImageVar;
         private bool isCalc = false;
@@ -41,7 +43,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
         List<City> cities_Array = new List<City>();
         List<Enemy> enemy_Array = new List<Enemy>();
-        
+        Random r = new Random();
+
         public Gierka()
         {
             this.KeyPreview = true;
@@ -116,6 +119,86 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             //działa, do usunięcia w swoim czasie
 
 
+        }
+        private void spawnMobs(int count, int x1, int x2, int y1, int y2)
+        {
+            Enemy newE;
+            for (int i = 0; i < count; i++)
+            {
+                newE = new Enemy();
+                //MessageBox.Show(square_size.ToString());
+                newE.writeParam(mainScreen, EHealthTXT, EPowerTXT, ENameTXT, EHealthBar, this,r,x1,x2,y1,y2);
+                bool git = true;
+                if (cities_Array.Count != 0)
+                {
+                    cities_Array.ForEach(delegate (City item)
+                    {
+                        if (item != null)
+                        {
+                            if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
+                            {
+                            //MessageBox.Show("PASS");
+                            //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
+                        }
+                            else
+                            {
+                            //MessageBox.Show("NOK");
+                            //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
+                            git = false;
+                            }
+                        }
+                        else
+                        {
+                            git = true;
+                        }
+                    });
+                }
+                else
+                {
+                    git = true;
+                }
+                if (git)
+                {
+                    if (enemy_Array.Count != 0)
+                    {
+                        enemy_Array.ForEach(delegate (Enemy item)
+                        {
+                            if (item != null)
+                            {
+                                if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
+                                {
+                                //MessageBox.Show("PASS");
+                                //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
+                            }
+                                else
+                                {
+                                //MessageBox.Show("NOK");
+                                //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
+                                git = false;
+                                }
+                            }
+                            else
+                            {
+                                git = true;
+                            }
+                        });
+                    }
+                    else
+                    {
+                        git = true;
+                    }
+                }
+                if (git)
+                {
+                    //plansza.Controls.Remove();
+                    planszaTab.Controls.Add(newE);
+                    enemy_Array.Add(newE);
+                }
+                else
+                {
+                    newE.Dispose();
+                }
+            }
         }
 
         private void updateSellList()
@@ -1321,7 +1404,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 if (activeTab == 1) { 
                 City noweM = new City();
                 //MessageBox.Show(square_size.ToString());
-                noweM.writeParam(mainScreen, monTXT, levTXT, this);
+                noweM.writeParam(mainScreen, monTXT, levTXT, this, r);
                 bool git = true;
                 if (cities_Array.Count != 0)
                 {
@@ -1392,75 +1475,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             }
             else if (e.KeyCode == Keys.G)
             {
-                Enemy newE = new Enemy();
-                 //MessageBox.Show(square_size.ToString());
-                 newE.writeParam(mainScreen, EHealthTXT, EPowerTXT, ENameTXT, EHealthBar, this);
-                 bool git = true;
-                 if (cities_Array.Count != 0)
-                 {
-                     cities_Array.ForEach(delegate (City item)
-                     {
-                         if (item != null)
-                         {
-                             if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
-                             {
-                                 //MessageBox.Show("PASS");
-                               //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
-                             }
-                             else
-                             {
-                                 //MessageBox.Show("NOK");
-                                //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
-                                git = false;
-                             }
-                         }
-                         else
-                         {
-                            git = true;
-                         }
-                     });
-                 }
-                 else
-                 {
-                      git = true;
-                 }
-                 if (git)
-                 {
-                     if (enemy_Array.Count != 0)
-                     {
-                       enemy_Array.ForEach(delegate (Enemy item)
-                        {
-                            if (item != null)
-                            {
-                                if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
-                                {
-                                    //MessageBox.Show("PASS");
-                                    //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
-                                }
-                                else
-                                {
-                                    //MessageBox.Show("NOK");
-                                    //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
-                                    git = false;
-                                }
-                            }
-                            else
-                            {
-                                 git = true;
-                            }
-                       });
-                     }
-                     else
-                     {
-                        git = true;
-                     }
-                 }
-                 if (git)
-                 {
-                    //plansza.Controls.Remove();
-                     planszaTab.Controls.Add(newE);
-                     enemy_Array.Add(newE);
-                 }
+                spawnMobs(3,0,1200,0,1200);
             }
         }
 
@@ -1541,7 +1556,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         {
             fightTimer.Start();
         }
-
         private void fleeButt_Click(object sender, EventArgs e)
         {
             Random leme = new Random();
@@ -1571,7 +1585,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         {
             if (e.KeyCode == Keys.Enter)
             {
-
                 fightTimer.Stop();
                 questionMarkConst1.Visible = false;
                 questionMarkConst2.Visible = false;
@@ -1582,7 +1595,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 {
 
                     fightInfoTXT.Text = "Dobrze!"+' '+ Math.Floor((double)ticks / 10).ToString() + ':' + (ticks - (Math.Floor((double)ticks / 10)) * 10).ToString()+'s';
-                    if ((EHealthBar.Value - 2000)>0) //(int)Math.Round((20 - 2 * (double)ticks / 10)))>0)
+                    if ((EHealthBar.Value - (int)Math.Round((20 - 2 * (double)ticks / 10)))>0)
                     {
                         EHealthBar.Value -= (int)Math.Round((20 - 2 * (double)ticks / 10));
                         EHealthTXT.Text = EHealthBar.Value.ToString() + '/' + EHealthBar.Maximum.ToString();
@@ -1658,6 +1671,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 {
                     // the night started
                     dayNightBar.Value = 0;
+                    spawnMobs(5,0,1200,0,1200);
                     moonSunPic.Image = Resources.Moon;
                     dayNightBar.ForeColor = Color.Blue;
                     isDay = false;
@@ -1705,6 +1719,70 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         private void startButt_Click(object sender, EventArgs e)
         {
+            City noweM;
+            bool git = true;
+            //spawn cities
+            for (int i = 0; i < 20; i++)
+            {
+                
+                while(true)
+                {
+                    noweM = new City();
+                    git = true;
+                    //MessageBox.Show(square_size.ToString());
+                    noweM.writeParam(mainScreen, monTXT, levTXT, this, r);
+                    if (cities_Array.Count != 0)
+                    {
+                        cities_Array.ForEach(delegate (City item)
+                        {
+                            if (item != null)
+                            {
+                                if (item.Location.X <= noweM.Location.X - widthToIgnore || item.Location.X >= noweM.Location.X + widthToIgnore || item.Location.Y <= noweM.Location.Y - widthToIgnore || item.Location.Y >= noweM.Location.Y + widthToIgnore)
+                                {
+                                    //MessageBox.Show("PASS");
+                                    //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
+                                }
+                                else
+                                {
+                                    //MessageBox.Show("NOK");
+                                    //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
+                                    git = false;
+                                }
+                            }
+                            else
+                            {
+                                git = true;
+                            }
+                        });
+                    }
+                    else
+                    {
+                        git = true;
+                    }
+                    if (git)
+                    {
+                        //MessageBox.Show("PASS");
+                        //plansza.Controls.Remove();
+                        planszaTab.Controls.Add(noweM);
+                        cities_Array.Add(noweM);
+                        break;
+                    }
+                    else
+                    {
+                        noweM.Dispose();
+                    }
+                }
+                //MessageBox.Show(i.ToString());
+            }
+            spawnMobs(7, 0, 1200, 0, 1200);
+            spawnMobs(7, 1200,2000, 0, 1200);
+            spawnMobs(7, -1200, 0, 0, 1200);
+            spawnMobs(7, 0, 1200, 1200,2000);
+            spawnMobs(7, 0, 1200, -1200, 0);
+            spawnMobs(7, 1200, 2000, 1200, 2000);
+            spawnMobs(7, 1200, 2000, -1200, 0);
+            spawnMobs(7, -1200, 0, 1200, 2000);
+            spawnMobs(7, -1200, 0, -1200, 0);
             mainScreen.SelectTab(1);
             activeTab = 1;
             sideStripMenu.Visible = true;
@@ -1955,6 +2033,62 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private void planszaTab_Enter(object sender, EventArgs e)
         {
             dayNightTimer.Start();
+        }
+
+        private void equipButt_Click(object sender, EventArgs e)
+        {
+            if (itemsList.SelectedIndices.Count != 0)
+            {
+                switch (itemsList.Items[itemsList.SelectedIndices[0]].SubItems[1].Text)
+                {
+                    case "Wooden armor":
+                        if (itemsList.Items[itemsList.SelectedIndices[0]].SubItems[4].Text != "equipped")
+                        {
+                            foreach (ListViewItem temp in itemsList.Items)
+                            {
+                                if(temp.SubItems[4].Text=="equipped")
+                                {
+                                    switch (temp.SubItems[1].Text)
+                                    {
+                                        case "Steel armor":
+
+                                            break;
+                                        case "Slime armor":
+
+                                            break;
+                                        case "Dragon armor":
+
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                        break;
+                    case "Steel armor":
+
+                        break;
+                    case "Wooden sword":
+                        
+                        break;
+                    case "Steel sword":
+
+                        break;
+                    case "Slime armor":
+
+                        break;
+                    case "Slime sword":
+
+                        break;
+                    case "Dragon armor":
+
+                        break;
+                    case "Dragon sword":
+
+                        break;
+                }
+            }
         }
     }
 }
