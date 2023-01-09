@@ -125,7 +125,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             for (int i = 0; i < count; i++)
             {
                 newE = new Enemy();
-                //MessageBox.Show(square_size.ToString());
                 newE.writeParam(mainScreen, EHealthTXT, EPowerTXT, ENameTXT, EHealthBar, this,r,x1,x2,y1,y2);
                 bool git = true;
                 if (cities_Array.Count != 0)
@@ -136,13 +135,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                         {
                             if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
                             {
-                            //MessageBox.Show("PASS");
-                            //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
-                        }
+                            }
                             else
                             {
-                            //MessageBox.Show("NOK");
-                            //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
                             git = false;
                             }
                         }
@@ -166,13 +161,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                             {
                                 if (item.Location.X <= newE.Location.X - widthToIgnore || item.Location.X >= newE.Location.X + widthToIgnore || item.Location.Y <= newE.Location.Y - widthToIgnore || item.Location.Y >= newE.Location.Y + widthToIgnore)
                                 {
-                                //MessageBox.Show("PASS");
-                                //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + noweM.Location.X.ToString() + "\tY:\t" + noweM.Location.Y.ToString());
                             }
                                 else
                                 {
-                                //MessageBox.Show("NOK");
-                                //MessageBox.Show("item:\nX:\t" + item.Location.X.ToString() + "\tY:\t" + item.Location.Y.ToString() + "\n" + "noweM:\nX:\t" + newE.Location.X.ToString() + "\tY:\t" + newE.Location.Y.ToString());
                                 git = false;
                                 }
                             }
@@ -189,7 +180,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 }
                 if (git)
                 {
-                    //plansza.Controls.Remove();
                     planszaTab.Controls.Add(newE);
                     enemy_Array.Add(newE);
                 }
@@ -199,8 +189,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                 }
             }
         }
+        
         /// <summary>
-        /// Method for synchronising sell list and user backpack
+        /// Method for synchronising backpack with sell list
         /// </summary>
         private void updateSellList()
         {

@@ -8,9 +8,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 {
     static class Program
     {
-        /// <summary>
-        
-        /// </summary>
         [STAThread]
         
         static void Main()
