@@ -77,27 +77,17 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             "inf"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gierka));
             this.mainScreen = new System.Windows.Forms.TabControl();
-            this.menuTab = new System.Windows.Forms.TabPage();
-            this.exitButt = new System.Windows.Forms.PictureBox();
-            this.optionsButt = new System.Windows.Forms.PictureBox();
-            this.loadButt = new System.Windows.Forms.PictureBox();
-            this.startButt = new System.Windows.Forms.PictureBox();
             this.planszaTab = new System.Windows.Forms.TabPage();
-            this.moonSunPic = new System.Windows.Forms.PictureBox();
             this.dayNightBar = new System.Windows.Forms.ProgressBar();
-            this.Warrior = new System.Windows.Forms.PictureBox();
             this.cityInfoTab = new System.Windows.Forms.TabPage();
             this.yMonTXT = new System.Windows.Forms.Label();
             this.yMoneyCityConstTXT = new System.Windows.Forms.Label();
-            this.cityBuyButt = new System.Windows.Forms.Button();
-            this.citySellButt = new System.Windows.Forms.Button();
             this.sellConstTxt = new System.Windows.Forms.Label();
             this.cityBuyList = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.craftButt = new System.Windows.Forms.Button();
             this.craftIngrPanel = new System.Windows.Forms.Panel();
             this.craftIng4Txt = new System.Windows.Forms.Label();
             this.craftIng3Txt = new System.Windows.Forms.Label();
@@ -118,17 +108,19 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.levTXT = new System.Windows.Forms.Label();
             this.levConstTXT = new System.Windows.Forms.Label();
             this.moneyConstTXT = new System.Windows.Forms.Label();
-            this.backButt1 = new System.Windows.Forms.PictureBox();
             this.backpackTab = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backButt2 = new System.Windows.Forms.PictureBox();
+            this.swordBackTXT = new System.Windows.Forms.Label();
+            this.powerBackTXT = new System.Windows.Forms.Label();
+            this.backpackConst2 = new System.Windows.Forms.Label();
+            this.backpackConst1 = new System.Windows.Forms.Label();
+            this.backpackConst = new System.Windows.Forms.Label();
             this.itemsList = new System.Windows.Forms.ListView();
             this.d = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Items = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Equipped = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.fightTab = new System.Windows.Forms.TabPage();
-            this.fightLeaveButt = new System.Windows.Forms.PictureBox();
             this.YDamageTXT = new System.Windows.Forms.Label();
             this.EDamageTXT = new System.Windows.Forms.Label();
             this.EnemyNameTxtPanel = new System.Windows.Forms.Panel();
@@ -142,8 +134,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.questionMarkConst2 = new System.Windows.Forms.Label();
             this.questionMarkConst1 = new System.Windows.Forms.Label();
             this.answerBox = new System.Windows.Forms.TextBox();
-            this.fleeButt = new System.Windows.Forms.Button();
-            this.AttackButt = new System.Windows.Forms.Button();
             this.YPowerTXT = new System.Windows.Forms.Label();
             this.YPowerConstTXT = new System.Windows.Forms.Label();
             this.EPowerTXT = new System.Windows.Forms.Label();
@@ -154,49 +144,79 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.YHealthBar = new System.Windows.Forms.ProgressBar();
             this.YourHealthConstTXT = new System.Windows.Forms.Label();
             this.EnemyHealthConstTXT = new System.Windows.Forms.Label();
-            this.EnemyImage = new System.Windows.Forms.PictureBox();
             this.optionsTab = new System.Windows.Forms.TabPage();
             this.musicVolumeSlider = new NAudio.Gui.VolumeSlider();
             this.optionsConstTxT = new System.Windows.Forms.Label();
-            this.backButt3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.backpackIcon = new System.Windows.Forms.PictureBox();
-            this.gearIcon = new System.Windows.Forms.PictureBox();
             this.fightTimer = new System.Windows.Forms.Timer(this.components);
             this.dmgTimer = new System.Windows.Forms.Timer(this.components);
             this.dayNightTimer = new System.Windows.Forms.Timer(this.components);
             this.menuPullButt = new System.Windows.Forms.Panel();
             this.sideStripMenu = new System.Windows.Forms.Panel();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pathTXTConst = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.statPath = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backpackIcon = new System.Windows.Forms.PictureBox();
+            this.gearIcon = new System.Windows.Forms.PictureBox();
+            this.menuTab = new System.Windows.Forms.TabPage();
+            this.exitButt = new System.Windows.Forms.PictureBox();
+            this.optionsButt = new System.Windows.Forms.PictureBox();
+            this.loadButt = new System.Windows.Forms.PictureBox();
+            this.startButt = new System.Windows.Forms.PictureBox();
+            this.moonSunPic = new System.Windows.Forms.PictureBox();
+            this.Warrior = new System.Windows.Forms.PictureBox();
+            this.craftButt = new System.Windows.Forms.PictureBox();
+            this.backButt1 = new System.Windows.Forms.PictureBox();
             this.equipButt = new System.Windows.Forms.PictureBox();
-            this.Equipped = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backButt2 = new System.Windows.Forms.PictureBox();
+            this.fightLeaveButt = new System.Windows.Forms.PictureBox();
+            this.EnemyImage = new System.Windows.Forms.PictureBox();
+            this.folderButt = new System.Windows.Forms.PictureBox();
+            this.backButt3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.citySellButt = new System.Windows.Forms.PictureBox();
+            this.cityBuyButt = new System.Windows.Forms.PictureBox();
+            this.AttackButt = new System.Windows.Forms.PictureBox();
+            this.fleeButt = new System.Windows.Forms.PictureBox();
             this.mainScreen.SuspendLayout();
+            this.planszaTab.SuspendLayout();
+            this.cityInfoTab.SuspendLayout();
+            this.craftIngrPanel.SuspendLayout();
+            this.backpackTab.SuspendLayout();
+            this.fightTab.SuspendLayout();
+            this.EnemyNameTxtPanel.SuspendLayout();
+            this.exerciseTxtPanel.SuspendLayout();
+            this.fightInfoTxtPanel.SuspendLayout();
+            this.optionsTab.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.sideStripMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).BeginInit();
             this.menuTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionsButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startButt)).BeginInit();
-            this.planszaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moonSunPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).BeginInit();
-            this.cityInfoTab.SuspendLayout();
-            this.craftIngrPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.craftButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt1)).BeginInit();
-            this.backpackTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.equipButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt2)).BeginInit();
-            this.fightTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).BeginInit();
-            this.EnemyNameTxtPanel.SuspendLayout();
-            this.exerciseTxtPanel.SuspendLayout();
-            this.fightInfoTxtPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EnemyImage)).BeginInit();
-            this.optionsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.folderButt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt3)).BeginInit();
-            this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).BeginInit();
-            this.sideStripMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipButt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citySellButt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBuyButt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttackButt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fleeButt)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -218,69 +238,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.mainScreen.TabIndex = 0;
             this.mainScreen.TabStop = false;
             // 
-            // menuTab
-            // 
-            this.menuTab.BackgroundImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Menu;
-            this.menuTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.menuTab.Controls.Add(this.exitButt);
-            this.menuTab.Controls.Add(this.optionsButt);
-            this.menuTab.Controls.Add(this.loadButt);
-            this.menuTab.Controls.Add(this.startButt);
-            this.menuTab.Location = new System.Drawing.Point(4, 4);
-            this.menuTab.Name = "menuTab";
-            this.menuTab.Padding = new System.Windows.Forms.Padding(3);
-            this.menuTab.Size = new System.Drawing.Size(1269, 994);
-            this.menuTab.TabIndex = 4;
-            this.menuTab.Text = "tabPage1";
-            this.menuTab.UseVisualStyleBackColor = true;
-            // 
-            // exitButt
-            // 
-            this.exitButt.BackColor = System.Drawing.Color.Transparent;
-            this.exitButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.ExitW;
-            this.exitButt.Location = new System.Drawing.Point(400, 694);
-            this.exitButt.Name = "exitButt";
-            this.exitButt.Size = new System.Drawing.Size(404, 113);
-            this.exitButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exitButt.TabIndex = 3;
-            this.exitButt.TabStop = false;
-            this.exitButt.Click += new System.EventHandler(this.exitButt_Click);
-            // 
-            // optionsButt
-            // 
-            this.optionsButt.BackColor = System.Drawing.Color.Transparent;
-            this.optionsButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.OptionsW;
-            this.optionsButt.Location = new System.Drawing.Point(400, 544);
-            this.optionsButt.Name = "optionsButt";
-            this.optionsButt.Size = new System.Drawing.Size(404, 113);
-            this.optionsButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.optionsButt.TabIndex = 2;
-            this.optionsButt.TabStop = false;
-            this.optionsButt.Click += new System.EventHandler(this.optionsButt_Click);
-            // 
-            // loadButt
-            // 
-            this.loadButt.BackColor = System.Drawing.Color.Transparent;
-            this.loadButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.LoadW;
-            this.loadButt.Location = new System.Drawing.Point(400, 394);
-            this.loadButt.Name = "loadButt";
-            this.loadButt.Size = new System.Drawing.Size(404, 113);
-            this.loadButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.loadButt.TabIndex = 1;
-            this.loadButt.TabStop = false;
-            // 
-            // startButt
-            // 
-            this.startButt.BackColor = System.Drawing.Color.Transparent;
-            this.startButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.StartW;
-            this.startButt.Location = new System.Drawing.Point(400, 244);
-            this.startButt.Name = "startButt";
-            this.startButt.Size = new System.Drawing.Size(404, 113);
-            this.startButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.startButt.TabIndex = 0;
-            this.startButt.TabStop = false;
-            this.startButt.Click += new System.EventHandler(this.startButt_Click);
-            // 
             // planszaTab
             // 
             this.planszaTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -294,16 +251,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.planszaTab.Size = new System.Drawing.Size(1269, 994);
             this.planszaTab.TabIndex = 0;
             this.planszaTab.Enter += new System.EventHandler(this.planszaTab_Enter);
-            // 
-            // moonSunPic
-            // 
-            this.moonSunPic.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Sun;
-            this.moonSunPic.Location = new System.Drawing.Point(613, 19);
-            this.moonSunPic.Name = "moonSunPic";
-            this.moonSunPic.Size = new System.Drawing.Size(77, 51);
-            this.moonSunPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.moonSunPic.TabIndex = 7;
-            this.moonSunPic.TabStop = false;
             // 
             // dayNightBar
             // 
@@ -319,26 +266,17 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.dayNightBar.TabIndex = 6;
             this.dayNightBar.Value = 100;
             // 
-            // Warrior
-            // 
-            this.Warrior.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.warrior_with_sword_and_shield;
-            this.Warrior.Location = new System.Drawing.Point(635, 497);
-            this.Warrior.Name = "Warrior";
-            this.Warrior.Size = new System.Drawing.Size(40, 40);
-            this.Warrior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Warrior.TabIndex = 0;
-            this.Warrior.TabStop = false;
-            // 
             // cityInfoTab
             // 
             this.cityInfoTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cityInfoTab.Controls.Add(this.yMonTXT);
-            this.cityInfoTab.Controls.Add(this.yMoneyCityConstTXT);
             this.cityInfoTab.Controls.Add(this.cityBuyButt);
             this.cityInfoTab.Controls.Add(this.citySellButt);
+            this.cityInfoTab.Controls.Add(this.pictureBox2);
+            this.cityInfoTab.Controls.Add(this.craftButt);
+            this.cityInfoTab.Controls.Add(this.yMonTXT);
+            this.cityInfoTab.Controls.Add(this.yMoneyCityConstTXT);
             this.cityInfoTab.Controls.Add(this.sellConstTxt);
             this.cityInfoTab.Controls.Add(this.cityBuyList);
-            this.cityInfoTab.Controls.Add(this.craftButt);
             this.cityInfoTab.Controls.Add(this.craftIngrPanel);
             this.cityInfoTab.Controls.Add(this.craftingCityConstTxt);
             this.cityInfoTab.Controls.Add(this.craftingCityList);
@@ -378,28 +316,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.yMoneyCityConstTXT.Size = new System.Drawing.Size(157, 26);
             this.yMoneyCityConstTXT.TabIndex = 15;
             this.yMoneyCityConstTXT.Text = "Your money";
-            // 
-            // cityBuyButt
-            // 
-            this.cityBuyButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cityBuyButt.Location = new System.Drawing.Point(251, 879);
-            this.cityBuyButt.Name = "cityBuyButt";
-            this.cityBuyButt.Size = new System.Drawing.Size(126, 55);
-            this.cityBuyButt.TabIndex = 14;
-            this.cityBuyButt.Text = "Buy";
-            this.cityBuyButt.UseVisualStyleBackColor = true;
-            this.cityBuyButt.Click += new System.EventHandler(this.cityBuyButt_Click);
-            // 
-            // citySellButt
-            // 
-            this.citySellButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.citySellButt.Location = new System.Drawing.Point(837, 879);
-            this.citySellButt.Name = "citySellButt";
-            this.citySellButt.Size = new System.Drawing.Size(126, 55);
-            this.citySellButt.TabIndex = 13;
-            this.citySellButt.Text = "Sell";
-            this.citySellButt.UseVisualStyleBackColor = true;
-            this.citySellButt.Click += new System.EventHandler(this.citySellButt_Click);
             // 
             // sellConstTxt
             // 
@@ -468,17 +384,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.columnHeader10.Text = "Count";
             this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader10.Width = 95;
-            // 
-            // craftButt
-            // 
-            this.craftButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.craftButt.Location = new System.Drawing.Point(200, 331);
-            this.craftButt.Name = "craftButt";
-            this.craftButt.Size = new System.Drawing.Size(126, 55);
-            this.craftButt.TabIndex = 10;
-            this.craftButt.Text = "Craft";
-            this.craftButt.UseVisualStyleBackColor = true;
-            this.craftButt.Click += new System.EventHandler(this.craftButt_Click);
             // 
             // craftIngrPanel
             // 
@@ -605,7 +510,8 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader11});
             this.citySellList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.citySellList.FullRowSelect = true;
             this.citySellList.GridLines = true;
@@ -689,23 +595,14 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.moneyConstTXT.TabIndex = 0;
             this.moneyConstTXT.Text = "City money";
             // 
-            // backButt1
-            // 
-            this.backButt1.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt1.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt1.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt1.Location = new System.Drawing.Point(11, 18);
-            this.backButt1.Margin = new System.Windows.Forms.Padding(2);
-            this.backButt1.Name = "backButt1";
-            this.backButt1.Size = new System.Drawing.Size(22, 24);
-            this.backButt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButt1.TabIndex = 1;
-            this.backButt1.TabStop = false;
-            this.backButt1.Click += new System.EventHandler(this.backButt1_Click);
-            // 
             // backpackTab
             // 
             this.backpackTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.backpackTab.Controls.Add(this.swordBackTXT);
+            this.backpackTab.Controls.Add(this.powerBackTXT);
+            this.backpackTab.Controls.Add(this.backpackConst2);
+            this.backpackTab.Controls.Add(this.backpackConst1);
+            this.backpackTab.Controls.Add(this.backpackConst);
             this.backpackTab.Controls.Add(this.equipButt);
             this.backpackTab.Controls.Add(this.pictureBox1);
             this.backpackTab.Controls.Add(this.backButt2);
@@ -717,29 +614,55 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.backpackTab.TabIndex = 2;
             this.backpackTab.Text = "BackpackTab";
             // 
-            // pictureBox1
+            // swordBackTXT
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(712, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 504);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.swordBackTXT.AutoSize = true;
+            this.swordBackTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.swordBackTXT.Location = new System.Drawing.Point(910, 119);
+            this.swordBackTXT.Name = "swordBackTXT";
+            this.swordBackTXT.Size = new System.Drawing.Size(124, 42);
+            this.swordBackTXT.TabIndex = 9;
+            this.swordBackTXT.Text = "label1";
             // 
-            // backButt2
+            // powerBackTXT
             // 
-            this.backButt2.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt2.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt2.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt2.Location = new System.Drawing.Point(11, 18);
-            this.backButt2.Margin = new System.Windows.Forms.Padding(2);
-            this.backButt2.Name = "backButt2";
-            this.backButt2.Size = new System.Drawing.Size(22, 24);
-            this.backButt2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButt2.TabIndex = 2;
-            this.backButt2.TabStop = false;
-            this.backButt2.Click += new System.EventHandler(this.backButt2_Click);
+            this.powerBackTXT.AutoSize = true;
+            this.powerBackTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.powerBackTXT.Location = new System.Drawing.Point(443, 119);
+            this.powerBackTXT.Name = "powerBackTXT";
+            this.powerBackTXT.Size = new System.Drawing.Size(124, 42);
+            this.powerBackTXT.TabIndex = 8;
+            this.powerBackTXT.Text = "label1";
+            // 
+            // backpackConst2
+            // 
+            this.backpackConst2.AutoSize = true;
+            this.backpackConst2.Font = new System.Drawing.Font("Antique Quest St", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backpackConst2.Location = new System.Drawing.Point(746, 115);
+            this.backpackConst2.Name = "backpackConst2";
+            this.backpackConst2.Size = new System.Drawing.Size(170, 50);
+            this.backpackConst2.TabIndex = 7;
+            this.backpackConst2.Text = "Sword:";
+            // 
+            // backpackConst1
+            // 
+            this.backpackConst1.AutoSize = true;
+            this.backpackConst1.Font = new System.Drawing.Font("Antique Quest St", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backpackConst1.Location = new System.Drawing.Point(273, 115);
+            this.backpackConst1.Name = "backpackConst1";
+            this.backpackConst1.Size = new System.Drawing.Size(179, 50);
+            this.backpackConst1.TabIndex = 6;
+            this.backpackConst1.Text = "Power:";
+            // 
+            // backpackConst
+            // 
+            this.backpackConst.AutoSize = true;
+            this.backpackConst.Font = new System.Drawing.Font("Antique Quest St", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backpackConst.Location = new System.Drawing.Point(524, 19);
+            this.backpackConst.Name = "backpackConst";
+            this.backpackConst.Size = new System.Drawing.Size(263, 50);
+            this.backpackConst.TabIndex = 5;
+            this.backpackConst.Text = "Traveller";
             // 
             // itemsList
             // 
@@ -756,7 +679,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.itemsList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.itemsList.HideSelection = false;
             this.itemsList.LabelWrap = false;
-            this.itemsList.Location = new System.Drawing.Point(38, 42);
+            this.itemsList.Location = new System.Drawing.Point(31, 267);
             this.itemsList.MultiSelect = false;
             this.itemsList.Name = "itemsList";
             this.itemsList.Size = new System.Drawing.Size(598, 486);
@@ -789,9 +712,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.Count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Count.Width = 95;
             // 
+            // Equipped
+            // 
+            this.Equipped.Text = "Equipped";
+            this.Equipped.Width = 118;
+            // 
             // fightTab
             // 
             this.fightTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.fightTab.Controls.Add(this.fleeButt);
+            this.fightTab.Controls.Add(this.AttackButt);
             this.fightTab.Controls.Add(this.fightLeaveButt);
             this.fightTab.Controls.Add(this.YDamageTXT);
             this.fightTab.Controls.Add(this.EDamageTXT);
@@ -803,8 +733,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTab.Controls.Add(this.questionMarkConst2);
             this.fightTab.Controls.Add(this.questionMarkConst1);
             this.fightTab.Controls.Add(this.answerBox);
-            this.fightTab.Controls.Add(this.fleeButt);
-            this.fightTab.Controls.Add(this.AttackButt);
             this.fightTab.Controls.Add(this.YPowerTXT);
             this.fightTab.Controls.Add(this.YPowerConstTXT);
             this.fightTab.Controls.Add(this.EPowerTXT);
@@ -823,18 +751,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.fightTab.TabIndex = 3;
             this.fightTab.Text = "fightTab";
             this.fightTab.Enter += new System.EventHandler(this.fightTab_Enter);
-            // 
-            // fightLeaveButt
-            // 
-            this.fightLeaveButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Exit;
-            this.fightLeaveButt.Location = new System.Drawing.Point(476, 874);
-            this.fightLeaveButt.Name = "fightLeaveButt";
-            this.fightLeaveButt.Size = new System.Drawing.Size(241, 67);
-            this.fightLeaveButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fightLeaveButt.TabIndex = 27;
-            this.fightLeaveButt.TabStop = false;
-            this.fightLeaveButt.Visible = false;
-            this.fightLeaveButt.Click += new System.EventHandler(this.fightLeaveButt_Click);
             // 
             // YDamageTXT
             // 
@@ -973,28 +889,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.answerBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.answerBox_KeyDown);
             this.answerBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.answerBox_KeyPress);
             // 
-            // fleeButt
-            // 
-            this.fleeButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.fleeButt.Location = new System.Drawing.Point(618, 587);
-            this.fleeButt.Name = "fleeButt";
-            this.fleeButt.Size = new System.Drawing.Size(117, 28);
-            this.fleeButt.TabIndex = 14;
-            this.fleeButt.Text = "Flee";
-            this.fleeButt.UseVisualStyleBackColor = true;
-            this.fleeButt.Click += new System.EventHandler(this.fleeButt_Click);
-            // 
-            // AttackButt
-            // 
-            this.AttackButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.AttackButt.Location = new System.Drawing.Point(442, 587);
-            this.AttackButt.Name = "AttackButt";
-            this.AttackButt.Size = new System.Drawing.Size(117, 28);
-            this.AttackButt.TabIndex = 13;
-            this.AttackButt.Text = "Attack";
-            this.AttackButt.UseVisualStyleBackColor = true;
-            this.AttackButt.Click += new System.EventHandler(this.AttackButt_Click);
-            // 
             // YPowerTXT
             // 
             this.YPowerTXT.AutoSize = true;
@@ -1103,18 +997,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.EnemyHealthConstTXT.Text = "Enemy Health";
             this.EnemyHealthConstTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EnemyImage
-            // 
-            this.EnemyImage.Location = new System.Drawing.Point(335, 17);
-            this.EnemyImage.Name = "EnemyImage";
-            this.EnemyImage.Size = new System.Drawing.Size(500, 500);
-            this.EnemyImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.EnemyImage.TabIndex = 0;
-            this.EnemyImage.TabStop = false;
-            // 
             // optionsTab
             // 
             this.optionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.optionsTab.Controls.Add(this.folderButt);
+            this.optionsTab.Controls.Add(this.panel1);
+            this.optionsTab.Controls.Add(this.pathTXTConst);
             this.optionsTab.Controls.Add(this.musicVolumeSlider);
             this.optionsTab.Controls.Add(this.optionsConstTxT);
             this.optionsTab.Controls.Add(this.backButt3);
@@ -1144,20 +1032,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.optionsConstTxT.TabIndex = 4;
             this.optionsConstTxT.Text = "Music Volume";
             // 
-            // backButt3
-            // 
-            this.backButt3.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
-            this.backButt3.Location = new System.Drawing.Point(11, 18);
-            this.backButt3.Margin = new System.Windows.Forms.Padding(2);
-            this.backButt3.Name = "backButt3";
-            this.backButt3.Size = new System.Drawing.Size(22, 24);
-            this.backButt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backButt3.TabIndex = 3;
-            this.backButt3.TabStop = false;
-            this.backButt3.Click += new System.EventHandler(this.backButt3_Click);
-            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(219)))), ((int)(((byte)(134)))));
@@ -1168,32 +1042,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(101, 986);
             this.panelMenu.TabIndex = 0;
-            // 
-            // backpackIcon
-            // 
-            this.backpackIcon.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.backpack;
-            this.backpackIcon.Location = new System.Drawing.Point(2, 124);
-            this.backpackIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.backpackIcon.Name = "backpackIcon";
-            this.backpackIcon.Size = new System.Drawing.Size(98, 86);
-            this.backpackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backpackIcon.TabIndex = 1;
-            this.backpackIcon.TabStop = false;
-            this.backpackIcon.Click += new System.EventHandler(this.backpackIcon_Click);
-            // 
-            // gearIcon
-            // 
-            this.gearIcon.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
-            this.gearIcon.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
-            this.gearIcon.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
-            this.gearIcon.Location = new System.Drawing.Point(2, 3);
-            this.gearIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.gearIcon.Name = "gearIcon";
-            this.gearIcon.Size = new System.Drawing.Size(98, 97);
-            this.gearIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gearIcon.TabIndex = 0;
-            this.gearIcon.TabStop = false;
-            this.gearIcon.Click += new System.EventHandler(this.gearIcon_Click);
             // 
             // fightTimer
             // 
@@ -1229,10 +1077,178 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.sideStripMenu.TabIndex = 2;
             this.sideStripMenu.Visible = false;
             // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "equipped";
+            // 
+            // pathTXTConst
+            // 
+            this.pathTXTConst.AutoSize = true;
+            this.pathTXTConst.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pathTXTConst.Location = new System.Drawing.Point(395, 258);
+            this.pathTXTConst.Name = "pathTXTConst";
+            this.pathTXTConst.Size = new System.Drawing.Size(467, 73);
+            this.pathTXTConst.TabIndex = 6;
+            this.pathTXTConst.Text = "Path to statistic";
+            // 
+            // statPath
+            // 
+            this.statPath.BackColor = System.Drawing.Color.White;
+            this.statPath.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.statPath.Location = new System.Drawing.Point(0, 0);
+            this.statPath.Name = "statPath";
+            this.statPath.Size = new System.Drawing.Size(840, 57);
+            this.statPath.TabIndex = 7;
+            this.statPath.Text = "C:\\Users\\user\\Desktop";
+            this.statPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.statPath);
+            this.panel1.Location = new System.Drawing.Point(196, 334);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(840, 57);
+            this.panel1.TabIndex = 8;
+            // 
+            // backpackIcon
+            // 
+            this.backpackIcon.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.backpack;
+            this.backpackIcon.Location = new System.Drawing.Point(2, 124);
+            this.backpackIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.backpackIcon.Name = "backpackIcon";
+            this.backpackIcon.Size = new System.Drawing.Size(98, 86);
+            this.backpackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backpackIcon.TabIndex = 1;
+            this.backpackIcon.TabStop = false;
+            this.backpackIcon.Click += new System.EventHandler(this.backpackIcon_Click);
+            // 
+            // gearIcon
+            // 
+            this.gearIcon.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
+            this.gearIcon.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
+            this.gearIcon.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.gear;
+            this.gearIcon.Location = new System.Drawing.Point(2, 3);
+            this.gearIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.gearIcon.Name = "gearIcon";
+            this.gearIcon.Size = new System.Drawing.Size(98, 97);
+            this.gearIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gearIcon.TabIndex = 0;
+            this.gearIcon.TabStop = false;
+            this.gearIcon.Click += new System.EventHandler(this.gearIcon_Click);
+            // 
+            // menuTab
+            // 
+            this.menuTab.BackgroundImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Menu;
+            this.menuTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.menuTab.Controls.Add(this.exitButt);
+            this.menuTab.Controls.Add(this.optionsButt);
+            this.menuTab.Controls.Add(this.loadButt);
+            this.menuTab.Controls.Add(this.startButt);
+            this.menuTab.Location = new System.Drawing.Point(4, 4);
+            this.menuTab.Name = "menuTab";
+            this.menuTab.Padding = new System.Windows.Forms.Padding(3);
+            this.menuTab.Size = new System.Drawing.Size(1269, 994);
+            this.menuTab.TabIndex = 4;
+            this.menuTab.Text = "tabPage1";
+            this.menuTab.UseVisualStyleBackColor = true;
+            // 
+            // exitButt
+            // 
+            this.exitButt.BackColor = System.Drawing.Color.Transparent;
+            this.exitButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.ExitW;
+            this.exitButt.Location = new System.Drawing.Point(400, 694);
+            this.exitButt.Name = "exitButt";
+            this.exitButt.Size = new System.Drawing.Size(404, 113);
+            this.exitButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exitButt.TabIndex = 3;
+            this.exitButt.TabStop = false;
+            this.exitButt.Click += new System.EventHandler(this.exitButt_Click);
+            // 
+            // optionsButt
+            // 
+            this.optionsButt.BackColor = System.Drawing.Color.Transparent;
+            this.optionsButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.OptionsW;
+            this.optionsButt.Location = new System.Drawing.Point(400, 544);
+            this.optionsButt.Name = "optionsButt";
+            this.optionsButt.Size = new System.Drawing.Size(404, 113);
+            this.optionsButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.optionsButt.TabIndex = 2;
+            this.optionsButt.TabStop = false;
+            this.optionsButt.Click += new System.EventHandler(this.optionsButt_Click);
+            // 
+            // loadButt
+            // 
+            this.loadButt.BackColor = System.Drawing.Color.Transparent;
+            this.loadButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.LoadW;
+            this.loadButt.Location = new System.Drawing.Point(400, 394);
+            this.loadButt.Name = "loadButt";
+            this.loadButt.Size = new System.Drawing.Size(404, 113);
+            this.loadButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadButt.TabIndex = 1;
+            this.loadButt.TabStop = false;
+            // 
+            // startButt
+            // 
+            this.startButt.BackColor = System.Drawing.Color.Transparent;
+            this.startButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.StartW;
+            this.startButt.Location = new System.Drawing.Point(400, 244);
+            this.startButt.Name = "startButt";
+            this.startButt.Size = new System.Drawing.Size(404, 113);
+            this.startButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.startButt.TabIndex = 0;
+            this.startButt.TabStop = false;
+            this.startButt.Click += new System.EventHandler(this.startButt_Click);
+            // 
+            // moonSunPic
+            // 
+            this.moonSunPic.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Sun;
+            this.moonSunPic.Location = new System.Drawing.Point(613, 19);
+            this.moonSunPic.Name = "moonSunPic";
+            this.moonSunPic.Size = new System.Drawing.Size(77, 51);
+            this.moonSunPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.moonSunPic.TabIndex = 7;
+            this.moonSunPic.TabStop = false;
+            // 
+            // Warrior
+            // 
+            this.Warrior.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.warrior_with_sword_and_shield;
+            this.Warrior.Location = new System.Drawing.Point(635, 497);
+            this.Warrior.Name = "Warrior";
+            this.Warrior.Size = new System.Drawing.Size(40, 40);
+            this.Warrior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Warrior.TabIndex = 0;
+            this.Warrior.TabStop = false;
+            // 
+            // craftButt
+            // 
+            this.craftButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Craft;
+            this.craftButt.Location = new System.Drawing.Point(177, 320);
+            this.craftButt.Name = "craftButt";
+            this.craftButt.Size = new System.Drawing.Size(185, 51);
+            this.craftButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.craftButt.TabIndex = 17;
+            this.craftButt.TabStop = false;
+            this.craftButt.Click += new System.EventHandler(this.craftButt_Click);
+            // 
+            // backButt1
+            // 
+            this.backButt1.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt1.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt1.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt1.Location = new System.Drawing.Point(11, 18);
+            this.backButt1.Margin = new System.Windows.Forms.Padding(2);
+            this.backButt1.Name = "backButt1";
+            this.backButt1.Size = new System.Drawing.Size(22, 24);
+            this.backButt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButt1.TabIndex = 1;
+            this.backButt1.TabStop = false;
+            this.backButt1.Click += new System.EventHandler(this.backButt1_Click);
+            // 
             // equipButt
             // 
-            this.equipButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Load;
-            this.equipButt.Location = new System.Drawing.Point(252, 534);
+            this.equipButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Equip;
+            this.equipButt.Location = new System.Drawing.Point(245, 759);
             this.equipButt.Name = "equipButt";
             this.equipButt.Size = new System.Drawing.Size(199, 60);
             this.equipButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1240,10 +1256,129 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.equipButt.TabStop = false;
             this.equipButt.Click += new System.EventHandler(this.equipButt_Click);
             // 
-            // Equipped
+            // pictureBox1
             // 
-            this.Equipped.Text = "Equipped";
-            this.Equipped.Width = 118;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(705, 267);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(448, 504);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // backButt2
+            // 
+            this.backButt2.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt2.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt2.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt2.Location = new System.Drawing.Point(11, 18);
+            this.backButt2.Margin = new System.Windows.Forms.Padding(2);
+            this.backButt2.Name = "backButt2";
+            this.backButt2.Size = new System.Drawing.Size(22, 24);
+            this.backButt2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButt2.TabIndex = 2;
+            this.backButt2.TabStop = false;
+            this.backButt2.Click += new System.EventHandler(this.backButt2_Click);
+            // 
+            // fightLeaveButt
+            // 
+            this.fightLeaveButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Exit;
+            this.fightLeaveButt.Location = new System.Drawing.Point(476, 874);
+            this.fightLeaveButt.Name = "fightLeaveButt";
+            this.fightLeaveButt.Size = new System.Drawing.Size(241, 67);
+            this.fightLeaveButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fightLeaveButt.TabIndex = 27;
+            this.fightLeaveButt.TabStop = false;
+            this.fightLeaveButt.Visible = false;
+            this.fightLeaveButt.Click += new System.EventHandler(this.fightLeaveButt_Click);
+            // 
+            // EnemyImage
+            // 
+            this.EnemyImage.Location = new System.Drawing.Point(335, 17);
+            this.EnemyImage.Name = "EnemyImage";
+            this.EnemyImage.Size = new System.Drawing.Size(500, 500);
+            this.EnemyImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.EnemyImage.TabIndex = 0;
+            this.EnemyImage.TabStop = false;
+            // 
+            // folderButt
+            // 
+            this.folderButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.folder;
+            this.folderButt.Location = new System.Drawing.Point(1051, 334);
+            this.folderButt.Name = "folderButt";
+            this.folderButt.Size = new System.Drawing.Size(56, 57);
+            this.folderButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.folderButt.TabIndex = 9;
+            this.folderButt.TabStop = false;
+            this.folderButt.Click += new System.EventHandler(this.folderButt_Click);
+            // 
+            // backButt3
+            // 
+            this.backButt3.ErrorImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.InitialImage = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.back;
+            this.backButt3.Location = new System.Drawing.Point(11, 18);
+            this.backButt3.Margin = new System.Windows.Forms.Padding(2);
+            this.backButt3.Name = "backButt3";
+            this.backButt3.Size = new System.Drawing.Size(22, 24);
+            this.backButt3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButt3.TabIndex = 3;
+            this.backButt3.TabStop = false;
+            this.backButt3.Click += new System.EventHandler(this.backButt3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.cityInside;
+            this.pictureBox2.Location = new System.Drawing.Point(659, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(470, 409);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
+            // citySellButt
+            // 
+            this.citySellButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Sell;
+            this.citySellButt.Location = new System.Drawing.Point(809, 883);
+            this.citySellButt.Name = "citySellButt";
+            this.citySellButt.Size = new System.Drawing.Size(185, 51);
+            this.citySellButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.citySellButt.TabIndex = 19;
+            this.citySellButt.TabStop = false;
+            this.citySellButt.Click += new System.EventHandler(this.citySellButt_Click);
+            // 
+            // cityBuyButt
+            // 
+            this.cityBuyButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Buy;
+            this.cityBuyButt.Location = new System.Drawing.Point(215, 883);
+            this.cityBuyButt.Name = "cityBuyButt";
+            this.cityBuyButt.Size = new System.Drawing.Size(185, 51);
+            this.cityBuyButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cityBuyButt.TabIndex = 20;
+            this.cityBuyButt.TabStop = false;
+            this.cityBuyButt.Click += new System.EventHandler(this.cityBuyButt_Click);
+            // 
+            // AttackButt
+            // 
+            this.AttackButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Attack;
+            this.AttackButt.Location = new System.Drawing.Point(380, 559);
+            this.AttackButt.Name = "AttackButt";
+            this.AttackButt.Size = new System.Drawing.Size(197, 56);
+            this.AttackButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AttackButt.TabIndex = 28;
+            this.AttackButt.TabStop = false;
+            this.AttackButt.Click += new System.EventHandler(this.AttackButt_Click);
+            // 
+            // fleeButt
+            // 
+            this.fleeButt.Image = global::Projekt_JPWP_Sebastian_Kowanda.Properties.Resources.Flee;
+            this.fleeButt.Location = new System.Drawing.Point(595, 559);
+            this.fleeButt.Name = "fleeButt";
+            this.fleeButt.Size = new System.Drawing.Size(197, 56);
+            this.fleeButt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fleeButt.TabIndex = 29;
+            this.fleeButt.TabStop = false;
+            this.fleeButt.Click += new System.EventHandler(this.fleeButt_Click);
             // 
             // Gierka
             // 
@@ -1262,37 +1397,46 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             this.Load += new System.EventHandler(this.Giera_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gierka_KeyDown);
             this.mainScreen.ResumeLayout(false);
+            this.planszaTab.ResumeLayout(false);
+            this.cityInfoTab.ResumeLayout(false);
+            this.cityInfoTab.PerformLayout();
+            this.craftIngrPanel.ResumeLayout(false);
+            this.craftIngrPanel.PerformLayout();
+            this.backpackTab.ResumeLayout(false);
+            this.backpackTab.PerformLayout();
+            this.fightTab.ResumeLayout(false);
+            this.fightTab.PerformLayout();
+            this.EnemyNameTxtPanel.ResumeLayout(false);
+            this.exerciseTxtPanel.ResumeLayout(false);
+            this.fightInfoTxtPanel.ResumeLayout(false);
+            this.optionsTab.ResumeLayout(false);
+            this.optionsTab.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.sideStripMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).EndInit();
             this.menuTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exitButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionsButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startButt)).EndInit();
-            this.planszaTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.moonSunPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Warrior)).EndInit();
-            this.cityInfoTab.ResumeLayout(false);
-            this.cityInfoTab.PerformLayout();
-            this.craftIngrPanel.ResumeLayout(false);
-            this.craftIngrPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.craftButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt1)).EndInit();
-            this.backpackTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.equipButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt2)).EndInit();
-            this.fightTab.ResumeLayout(false);
-            this.fightTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fightLeaveButt)).EndInit();
-            this.EnemyNameTxtPanel.ResumeLayout(false);
-            this.exerciseTxtPanel.ResumeLayout(false);
-            this.fightInfoTxtPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EnemyImage)).EndInit();
-            this.optionsTab.ResumeLayout(false);
-            this.optionsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.folderButt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButt3)).EndInit();
-            this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.backpackIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gearIcon)).EndInit();
-            this.sideStripMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.equipButt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citySellButt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBuyButt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttackButt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fleeButt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1331,8 +1475,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.Label YPowerTXT;
         private System.Windows.Forms.Label ENameTXT;
         private System.Windows.Forms.Timer fightTimer;
-        private System.Windows.Forms.Button fleeButt;
-        private System.Windows.Forms.Button AttackButt;
         private System.Windows.Forms.Label questionMarkConst2;
         private System.Windows.Forms.Label questionMarkConst1;
         private System.Windows.Forms.TextBox answerBox;
@@ -1375,7 +1517,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.Label craftIng2Txt;
         private System.Windows.Forms.Label craftIng1Txt;
         private System.Windows.Forms.Label craftConstTxt;
-        private System.Windows.Forms.Button craftButt;
         private System.Windows.Forms.Label craftIng4Txt;
         private System.Windows.Forms.Label sellConstTxt;
         private System.Windows.Forms.ListView cityBuyList;
@@ -1383,8 +1524,6 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.Button cityBuyButt;
-        private System.Windows.Forms.Button citySellButt;
         private System.Windows.Forms.Label yMonTXT;
         private System.Windows.Forms.Label yMoneyCityConstTXT;
         private System.Windows.Forms.ProgressBar dayNightBar;
@@ -1392,6 +1531,23 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox equipButt;
         private System.Windows.Forms.ColumnHeader Equipped;
+        private System.Windows.Forms.Label swordBackTXT;
+        private System.Windows.Forms.Label powerBackTXT;
+        private System.Windows.Forms.Label backpackConst2;
+        private System.Windows.Forms.Label backpackConst1;
+        private System.Windows.Forms.Label backpackConst;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label statPath;
+        private System.Windows.Forms.Label pathTXTConst;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.PictureBox folderButt;
+        private System.Windows.Forms.PictureBox craftButt;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox citySellButt;
+        private System.Windows.Forms.PictureBox cityBuyButt;
+        private System.Windows.Forms.PictureBox AttackButt;
+        private System.Windows.Forms.PictureBox fleeButt;
     }
 }
 

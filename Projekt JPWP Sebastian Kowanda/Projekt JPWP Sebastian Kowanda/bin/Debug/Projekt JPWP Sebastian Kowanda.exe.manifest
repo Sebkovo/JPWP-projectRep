@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66719704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Projekt JPWP Sebastian Kowanda.exe" size="66846168">
       <assemblyIdentity name="Projekt JPWP Sebastian Kowanda" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JbYur41vyAVJjLfBoI5s9WQKdbIdl03rd0KVBpfES2o=</dsig:DigestValue>
+        <dsig:DigestValue>XpDk5OQ0y4Od5J1V4agEkWjNNT/ywxywFdE4ZIZ+ykQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,6 +173,24 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Buttons\Attack.png" size="5096">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>btHWesTbmdhiOvNFLJOgYbF+hECTg93pVlETGMTb2E8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Buttons\Buy.png" size="4368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MiWK1USl87YTjZLYQoaCr5tmNAlf66g98Qz+5rfbOBQ=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Buttons\Craft.png" size="5298">
     <hash>
       <dsig:Transforms>
@@ -191,6 +209,15 @@
       <dsig:DigestValue>oQpHVBuOD4uvh19kLHEhS/uE9u1ASFFw5twJYcyzHkc=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Buttons\Equip.png" size="5552">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YD46vMkb+AT+MNHdofivOBpBq6t5c2WC8ZMi138UsZ4=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Buttons\Exit.png" size="4363">
     <hash>
       <dsig:Transforms>
@@ -207,6 +234,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>+AAswCgIxrsr7DU1Y6uL3VLTBL+A+hSMZzGMJkvMc84=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Buttons\Flee.png" size="4139">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ro/dzhmEZIbmONSx7ZIcsHigCldaJ919cfoi00svWKc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Buttons\Item.png" size="4539">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AbX+Ex4l8MJx5fuJn615GEoQhk1zBknrt01hKjfIos0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Buttons\Load.png" size="4957">
@@ -245,6 +290,15 @@
       <dsig:DigestValue>IkghtMp7xZQa+P6QOKAqTxDjNkEDtkZ4TS++X6+p9lM=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Buttons\Sell.png" size="4383">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5xd552Yl3XXJdI0xqL0lb0eMkmJ3YHNLBhdMNJGmbWA=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Buttons\Start.png" size="5023">
     <hash>
       <dsig:Transforms>
@@ -263,6 +317,15 @@
       <dsig:DigestValue>P9pylXjtAFFt7MCGBKWiSICenCvfAz9XM8ytZFxzjcc=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Icons\folder.png" size="4721">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+FHCa648mVQAqQK8JppB8MjUJFOuYZYPQhDT0tWDm6U=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Images\Character.png" size="78374">
     <hash>
       <dsig:Transforms>
@@ -270,6 +333,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>dGGUNcv4i7ztgQbg3jmT5vXG+1WfQFh6vUqyYV2QAYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\cityInside.png" size="56863">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/+vYcMjYc9Iqlgq3KdmmxJssyw+4XK531HlHuQjKYoE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Images\Gragon_New.png" size="1444661">

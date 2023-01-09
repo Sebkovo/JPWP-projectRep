@@ -12,6 +12,9 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 {
     public class Enemy : PictureBox
     {
+        /// <summary>
+        /// Enemy class
+        /// </summary>
         private TabControl parente;
         private Label healthLab;
         private Label powerLab;
@@ -60,6 +63,20 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             parentRef.activeTab = 4;
 
         }
+        /// <summary>
+        /// Writ initial parameters to an object
+        /// </summary>
+        /// <param name="parent1">Specify the tabControl parent of an object</param>
+        /// <param name="healtLab1">Reference to Enemy health Label on the screen</param>
+        /// <param name="powerLab1">Reference to Enemy power Label on the screen</param>
+        /// <param name="nameLab1">Reference to Enemy name Label on the screen</param>
+        /// <param name="EHealthBar1">Reference to Enemy health bar on the screen</param>
+        /// <param name="parent">Specify the Gierka parent of an object</param>
+        /// <param name="r1">Specify the Random variable created in the parent</param>
+        /// <param name="x1">Specify the min X of spawning area</param>
+        /// <param name="x2">Specify the max X of spawning area</param>
+        /// <param name="y1">Specify the min Y of spawning area</param>
+        /// <param name="y2">Specify the max Y of spawning area</param>
         public void writeParam(TabControl parent1, Label healtLab1, Label powerLab1, Label nameLab1,ProgressBar EHealthBar1, Gierka parent,Random r1, int x1,int x2,int y1,int y2)
         {
             parente = parent1;
@@ -121,9 +138,12 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     break;
             }
         }
+        /// <summary>
+        /// Enemy Class
+        /// </summary>
         public Enemy()
         {
-            
+           
             this.Width = 80;
             this.Height = 80;
             this.BackColor = Color.Transparent;

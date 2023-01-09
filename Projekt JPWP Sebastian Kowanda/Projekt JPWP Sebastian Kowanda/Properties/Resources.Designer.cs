@@ -91,6 +91,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Attack {
+            get {
+                object obj = ResourceManager.GetObject("Attack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back {
             get {
                 object obj = ResourceManager.GetObject("back", resourceCulture);
@@ -121,6 +131,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Buy {
+            get {
+                object obj = ResourceManager.GetObject("Buy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Character {
             get {
                 object obj = ResourceManager.GetObject("Character", resourceCulture);
@@ -134,6 +154,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap city {
             get {
                 object obj = ResourceManager.GetObject("city", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cityInside {
+            get {
+                object obj = ResourceManager.GetObject("cityInside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -171,6 +201,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Equip {
+            get {
+                object obj = ResourceManager.GetObject("Equip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
@@ -184,6 +224,26 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap ExitW {
             get {
                 object obj = ResourceManager.GetObject("ExitW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Flee {
+            get {
+                object obj = ResourceManager.GetObject("Flee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder {
+            get {
+                object obj = ResourceManager.GetObject("folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -214,6 +274,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap Happy_Slime {
             get {
                 object obj = ResourceManager.GetObject("Happy_Slime", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Item {
+            get {
+                object obj = ResourceManager.GetObject("Item", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -304,6 +374,16 @@ namespace Projekt_JPWP_Sebastian_Kowanda.Properties {
         internal static System.Drawing.Bitmap OptionsW {
             get {
                 object obj = ResourceManager.GetObject("OptionsW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sell {
+            get {
+                object obj = ResourceManager.GetObject("Sell", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
