@@ -12,7 +12,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         
         static void Main()
         {
-            //Application.EnableVisualStyles();
+            
             Application.SetCompatibleTextRenderingDefault(false);
             Gierka apka = new Gierka();
             Application.Run(apka);

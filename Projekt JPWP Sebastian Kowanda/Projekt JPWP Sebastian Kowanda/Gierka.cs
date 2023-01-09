@@ -15,38 +15,127 @@ using Projekt_JPWP_Sebastian_Kowanda.Properties;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+    /// <summary>
+    /// Gierka main method
+    /// </summary>
     public partial class Gierka : Form
     {
         /// <summary>
         /// Main class of the program
         /// </summary>
+
+
+        /// <summary>
+        /// Width around an object to ignore building
+        /// </summary>
         private int widthToIgnore = 80;
+        /// <summary>
+        /// Size of one square on map
+        /// </summary>
         private int square_size = 30;
+        /// <summary>
+        /// Indicator variable of player available money
+        /// </summary>
         private int playerMoney = 0;
-        private long ticks = 0;     // fight timer
-        private long ticks2 = 0;    // animation timer
-        private long ticks3 = 0;    // dayNight timer
+        /// <summary>
+        /// Variable counter for fighy timer
+        /// </summary>
+        private long ticks = 0;
+        /// <summary>
+        /// Variable counter for animation timer
+        /// </summary>
+        private long ticks2 = 0;
+        /// <summary>
+        /// Variable counter for dayNight timer
+        /// </summary>
+        private long ticks3 = 0;
+        /// <summary>
+        /// Boolean indicator of Day-Night state
+        /// </summary>
         private bool isDay = true;
+        /// <summary>
+        /// Indicator variable of player max health
+        /// </summary>
         private int playerHealth = 100;
+        /// <summary>
+        /// Indicator variable of player actual power
+        /// </summary>
         private int playerPower = 1;
+        /// <summary>
+        /// Indicator variable of player actual armor
+        /// </summary>
         private int playerArmor = 0;
+        /// <summary>
+        /// Indicator variable of player actual sword
+        /// </summary>
         private int playerSword = 0;
+        /// <summary>
+        /// Indicator variable of active tab
+        /// </summary>
         public int activeTab = 0;
+        /// <summary>
+        /// Actual Enemy image variable
+        /// </summary>
         public Image EnemyImageVar;
+        /// <summary>
+        /// Variable indicating if the calculations are over
+        /// </summary>
         private bool isCalc = false;
+        /// <summary>
+        /// Variable with the right answer for current excercise
+        /// </summary>
         private int answer;
+        /// <summary>
+        /// Indicator variable for active city
+        /// </summary>
         public City activeCity;
+        /// <summary>
+        /// Indicator variable for active enemy
+        /// </summary>
         public Enemy activeEnemy;
+        /// <summary>
+        /// List of available craftings
+        /// </summary>
         private string[] craftings = {"Wooden sword","Steel sword","Wooden armor","Steel armor","Slime sword","Slime armor","Happy potion","Angry potion","Weird potion","Dragon blood potion","Dragon sword","Dragon armor","Glass bottle"};
+        /// <summary>
+        /// List of prices for crafted items
+        /// </summary>
         private string[] prices = { "100", "240", "150", "360", "230", "300", "125", "125", "125", "525", "900", "1200", "25" };
+        /// <summary>
+        /// blank requirements string array, for indicating requirements
+        /// </summary>
         private string[] requirements = { "","","","","",""};
+        /// <summary>
+        /// Audio stream out variable 1
+        /// </summary>
         public WaveOut audOut1 = new WaveOut();
+        /// <summary>
+        /// Audio stream out variable 2
+        /// </summary>
         public WaveOut audOut2= new WaveOut();
+        /// <summary>
+        /// Variable for background music
+        /// </summary>
         private WaveStream stream1 = new Mp3FileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\bgMusic.mp3");
+        /// <summary>
+        /// Variable for sound effect
+        /// </summary>
         public WaveStream stream2 = new AudioFileReader(@"E:\Projekcik\githubRep\JPWP-projectRep\Projekt JPWP Sebastian Kowanda\Projekt JPWP Sebastian Kowanda\Audio\Aaaaaah.wav");
+        /// <summary>
+        /// Variable player for sound effect
+        /// </summary>
         SoundPlayer simpleSound = new SoundPlayer(Resources.Aaah);
+        /// <summary>
+        /// List of City objects
+        /// </summary>
         List<City> cities_Array = new List<City>();
+        /// <summary>
+        /// List of Enemy objects
+        /// </summary>
         List<Enemy> enemy_Array = new List<Enemy>();
+        /// <summary>
+        /// Variable for random generating
+        /// </summary>
         Random r = new Random();
 
         /// <summary>
@@ -1330,10 +1419,11 @@ namespace Projekt_JPWP_Sebastian_Kowanda
                     break;
             }
         }
+
         /// <summary>
         /// Method for generating an easy Excercise and its answer
         /// </summary>
-        /// <returns>Excercise as a string and an answer as an int</returns>
+        /// <returns>int</returns>
         private (string, int) genExerEASY()
         {
             Random r = new Random();

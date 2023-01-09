@@ -15,15 +15,46 @@ namespace Projekt_JPWP_Sebastian_Kowanda
         /// <summary>
         /// Enemy class
         /// </summary>
+        
+        /// <summary>
+        /// TabControl Parent refference 
+        /// </summary>
         private TabControl parente;
+        /// <summary>
+        /// Health label refference
+        /// </summary>
         private Label healthLab;
+        /// <summary>
+        /// Power label refference
+        /// </summary>
         private Label powerLab;
+        /// <summary>
+        /// Name label refference
+        /// </summary>
         private Label nameLab;
+        /// <summary>
+        /// Gierka Parent refference 
+        /// </summary>
         private Gierka parentRef;
+        /// <summary>
+        /// Health bar refference
+        /// </summary>
         ProgressBar EHealthBar;
+        /// <summary>
+        /// Name of an enemy
+        /// </summary>
         public string name;
+        /// <summary>
+        /// Health of an enemy
+        /// </summary>
         public int health;
+        /// <summary>
+        /// Power of an enemy
+        /// </summary>
         public int power;
+        /// <summary>
+        /// Variable for random generating
+        /// </summary>
         Random r;
         protected override void OnClick(EventArgs e)
         {
@@ -64,7 +95,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
 
         }
         /// <summary>
-        /// Writ initial parameters to an object
+        /// Write initial parameters to an object
         /// </summary>
         /// <param name="parent1">Specify the tabControl parent of an object</param>
         /// <param name="healtLab1">Reference to Enemy health Label on the screen</param>
@@ -139,7 +170,7 @@ namespace Projekt_JPWP_Sebastian_Kowanda
             }
         }
         /// <summary>
-        /// Enemy Class
+        /// Enemy main method
         /// </summary>
         public Enemy()
         {
