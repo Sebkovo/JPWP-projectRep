@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+
+    /// <summary>
+    /// Item main method
+    /// </summary>
     public class item
     {
         /// <summary>

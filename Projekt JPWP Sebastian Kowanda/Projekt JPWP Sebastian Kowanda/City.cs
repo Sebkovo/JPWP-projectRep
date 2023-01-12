@@ -10,6 +10,10 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+
+    /// <summary>
+    /// City main method
+    /// </summary>
     public class City : PictureBox
     {
         /// <summary>

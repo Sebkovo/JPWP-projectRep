@@ -15,6 +15,7 @@ using Projekt_JPWP_Sebastian_Kowanda.Properties;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+
     /// <summary>
     /// Gierka main method
     /// </summary>

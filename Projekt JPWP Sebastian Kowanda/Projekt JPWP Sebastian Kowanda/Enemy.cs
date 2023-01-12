@@ -10,6 +10,10 @@ using Projekt_JPWP_Sebastian_Kowanda.Properties;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+
+    /// <summary>
+    /// Enemy main method
+    /// </summary>
     public class Enemy : PictureBox
     {
         /// <summary>

@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace Projekt_JPWP_Sebastian_Kowanda
 {
+
+    /// <summary>
+    /// Program main method
+    /// </summary>
     static class Program
     {
         [STAThread]
